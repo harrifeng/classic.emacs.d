@@ -13,5 +13,7 @@
 (require 'font-setting)
 (require 'shell-setting)
 (require 'modeline-setting)
+(require 'el-get-setting)
 ;; keybing is the last to load
 (require 'keybind-setting)
+
