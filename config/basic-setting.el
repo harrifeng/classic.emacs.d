@@ -62,6 +62,8 @@
 ;; grep-windows-height
 (setq compilation-window-height 12)
 (setq grep-window-height 12)
+
+(setenv "PAGER" "cat")
 ;;;;;;;;;;;;;;;;;;;;
 ;; Boolean Habits ;;
 ;;;;;;;;;;;;;;;;;;;;
