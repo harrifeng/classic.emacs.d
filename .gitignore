@@ -1,3 +1,18 @@
+##############
+# Temp Files #
+##############
+*.elc
+*~
+.emacs_custom.el
+
+#################
+# History Fiels #
+#################
+eshell/
+
+###############
+# Python Code #
+###############
 *.py[cod]
 
 # C extensions
