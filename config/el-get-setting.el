@@ -29,3 +29,6 @@
 	    (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
 	    (define-key yas/keymap [tab] 'yas/next-field)))
 
+;; auto-complete-------------->>
+(require 'auto-complete-config)
+(ac-config-default)
