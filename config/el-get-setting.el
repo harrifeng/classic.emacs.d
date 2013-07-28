@@ -12,11 +12,11 @@
 
 (el-get 'sync)
 
-;;--------jedi plugin----------->
+;;--------jedi plugin-------------------------------------------------->>
 (add-hook 'python-mode-hook 'jedi:ac-setup)
 (setq jedi:setup-keys t)
 
-;; ---------yasnippet---------->>
+;; ---------yasnippet-------------------------------------------------->>
 (yas-global-mode 1)
 ;; modify conflict with org-mode
 (defun yas/org-very-safe-expand ()
@@ -29,6 +29,15 @@
 	    (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
 	    (define-key yas/keymap [tab] 'yas/next-field)))
 
-;; auto-complete-------------->>
+;;Right configuration for snippet show without mouse control
+(require 'dropdown-list)
+(setq yas/prompt-functions
+      '(yas/dropdown-prompt
+        yas/ido-prompt
+        yas/x-prompt
+        yas/completing-prompt
+        yas/no-prompt))
+
+;; auto-complete------------------------------------------------------->>
 (require 'auto-complete-config)
 (ac-config-default)
