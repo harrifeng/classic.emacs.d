@@ -31,4 +31,6 @@
 (ac-config-default)
 
 ;; grep-a-lot---------------------------------------------------------->>
-;; (grep-a-lot-setup-keys) already set by el-get
+(require 'grep-a-lot)
+(grep-a-lot-setup-keys)
+
