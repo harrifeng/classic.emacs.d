@@ -30,5 +30,5 @@
  ;; windows system special------------------------------>>
  ((eq system-type 'windows-nt)
   (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
-  (menu-bar-mode nil))
+  (menu-bar-mode -1))
  )
