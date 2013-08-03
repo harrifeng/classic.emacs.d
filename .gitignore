@@ -7,6 +7,7 @@ el-get/
 ##############
 # Temp Files #
 ##############
+tramp
 *.elc
 *~
 .emacs_custom.el
