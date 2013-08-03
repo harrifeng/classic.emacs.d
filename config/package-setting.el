@@ -1,5 +1,5 @@
 (provide 'package-setting)
 
-;; color theme autoload------------------------------------------------------->>
+;; color theme autoload[package:sublime-themes]------------------------------>>
 (load-theme 'hickey t)
 
