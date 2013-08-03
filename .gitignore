@@ -9,6 +9,7 @@ elpa/
 # Temp Files #
 ##############
 tramp
+.#*
 #*
 *.elc
 *~
