@@ -3,11 +3,13 @@
 ##################
 ac-comphist.dat
 el-get/
+elpa/
 
 ##############
 # Temp Files #
 ##############
 tramp
+#*
 *.elc
 *~
 .emacs_custom.el
