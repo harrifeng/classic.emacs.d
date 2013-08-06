@@ -4,16 +4,23 @@
   "Path for configuration")
 (add-to-list 'load-path my-lisps-path)
 
-(require 'systype-setting)
 (require 'basic-setting)
-;; path is used by others
-(require 'path-setting)
 (require 'helpfunc-setting)
+(require 'systype-setting)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; path is used by others ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'plugin-setting)
 (require 'mode-setting)
-(require 'font-setting)
 (require 'shell-setting)
 (require 'modeline-setting)
+
+;; (require 'el-get-setting)
 ;; (require 'package-setting)
-;; keybing is the last to load
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; keybind is the last to load ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'path-setting)
 (require 'keybind-setting)
+

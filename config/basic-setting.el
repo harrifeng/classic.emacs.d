@@ -64,6 +64,28 @@
 (setq grep-window-height 12)
 
 (setenv "PAGER" "cat")
+
+;; packages setting, this will work on all platforms, although unix-link system
+;; can use el-get, package still exist as supplementary
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+			 ("marmalade" . "http://marmalade-repo.org/packages/")
+			 ("melpa" . "http://melpa.milkbox.net/packages/")))  
+
+(package-initialize)
+
+;; different font size for different hosts
+(defconst my-font-size
+  (cond
+   ((string-match system-name "hfeng-linux")
+    ":pixelsize=16")
+   ((string-match system-name "hfeng-air.local")
+    ":pixelsize=14")
+   ((string-match system-name "hfeng-t60p")
+    ":pixelsize=20")
+   ((string-match system-name "sh-rd-hfeng")
+    ":pixelsize=16")
+   (":pixelsize=16")))
+
 ;;;;;;;;;;;;;;;;;;;;
 ;; Boolean Habits ;;
 ;;;;;;;;;;;;;;;;;;;;

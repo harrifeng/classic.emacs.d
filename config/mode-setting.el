@@ -13,12 +13,10 @@
 ;; makefile mode---------->>
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
 
-;; python mode------------>>
+;; python mode(from Emacs 24.3--->>
 (require 'python)
 (setq
- python-shell-interpreter "python.exe"
- python-shell-interpreter-args (concat "-i " (concat my-python-script-path
-                                                     "ipython-script.py"))
+ python-indent-offset 4
  python-shell-prompt-regexp "In \\[[0-9]+\\]: "
  python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
  python-shell-completion-setup-code

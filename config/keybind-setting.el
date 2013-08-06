@@ -13,6 +13,7 @@
 (global-set-key (kbd "C-h")          'backward-delete-char-untabify)
 (global-set-key (kbd "C-,")          'set-mark-command)
 (global-set-key (kbd "<f4>")         'loop-alpha)
+(global-set-key (kbd "<f5>")         'revert-buffer)
 (global-set-key (kbd "<C-return>")   'delete-other-windows)
 (global-set-key (kbd "<C-f11>")      'toggle-tool-bar-mode-from-frame)
 (global-set-key (kbd "M-;")          'qiang-comment-dwim-line)

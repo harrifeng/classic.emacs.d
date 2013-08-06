@@ -4,7 +4,7 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; monokai-theme------------------------------------------------------->>
+;; color theme autoload[package:sublime-themes]------------------------------>>
 (load-theme 'hickey t)
 
 

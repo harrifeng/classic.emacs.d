@@ -92,16 +92,6 @@
 	    (define-key org-mode-map (kbd "C-,") 'set-mark-command)
 	    ))
 
-(defun yas/org-very-safe-expand ()
-  (let ((yas/fallback-behavior 'return-nil)) (yas/expand)))
-
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (make-variable-buffer-local 'yas/trigger-key)
-	    (setq yas/trigger-key [tab])
-	    (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
-	    (define-key yas/keymap [tab] 'yas/next-field)))
-
 (setq org-export-html-style
       "<style type=\"text/css\"> html { font-family: Consolas; font-size: 12pt;} \
 pre{background-color:#002B36;Font:12pt Consolas, Courier New;color:wheat;}</style>")
