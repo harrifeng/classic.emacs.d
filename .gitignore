@@ -2,11 +2,16 @@
 # Plugin History #
 ##################
 ac-comphist.dat
+el-get/
 elpa/
+url/
 
 ##############
 # Temp Files #
 ##############
+tramp
+.#*
+#*
 *.elc
 *~
 .emacs_custom.el
