@@ -1,12 +1,15 @@
 (provide 'basic-setting)
 
-;;;;;;;;;;;;;;;;;;;;;;;
-;; Quantified Habits ;;
-;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; =============Quantified Habits================ ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (setq user-mail-address "harrifeng@gmail.com")
 (setq user-full-name    "harrifeng")
 
 (setq kill-ring-max 200)
+
+(setq-default tab-width 4)
 
 (setq scroll-step 0
       scroll-margin 0
@@ -86,9 +89,13 @@
     ":pixelsize=16")
    (":pixelsize=16")))
 
-;;;;;;;;;;;;;;;;;;;;
-;; Boolean Habits ;;
-;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ==============Boolean Habits=================== ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; use spaces only!
+(setq-default indent-tabs-mode nil)
+
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
 (setq column-number-mode t)
