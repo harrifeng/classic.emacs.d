@@ -15,7 +15,7 @@
 (require 'shell-setting)
 (require 'modeline-setting)
 
-;; (require 'el-get-setting)
+(require 'el-get-setting)
 ;; (require 'package-setting)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
