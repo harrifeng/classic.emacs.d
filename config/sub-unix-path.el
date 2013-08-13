@@ -1,4 +1,4 @@
-(provide 'unix-path)
+(provide 'sub-unix-path)
 
 ;;For Macos build the emacs by
 ;; > brew install emacs --cocoa --srge
