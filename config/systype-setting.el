@@ -36,6 +36,10 @@
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
   (global-set-key (kbd "<f8>")         'toggle-fullscreen)
 
+  ;; Mac Emacs start with fix height and width----------------->>
+  (add-to-list 'default-frame-alist '(height . 50))
+  (add-to-list 'default-frame-alist '(width . 176))
+
   ;; menu-bar-mode is useful in mac---------------------------->>
   (menu-bar-mode t))
  
