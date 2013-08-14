@@ -16,7 +16,7 @@
 (require 'modeline-setting)
 
 ;; (require 'el-get-setting)
-;; (require 'package-setting)
+(require 'package-setting)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; keybind is the last to load ;;
