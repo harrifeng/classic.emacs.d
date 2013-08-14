@@ -56,6 +56,9 @@
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  ((eq system-type 'cygwin)
+  (require 'sub-nt-font)
+  ;; max windows size on start up------------------------------>>
+  (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
   (menu-bar-mode nil))
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
