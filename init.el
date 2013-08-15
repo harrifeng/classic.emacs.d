@@ -6,6 +6,7 @@
 
 (require 'basic-setting)
 (require 'helpfunc-setting)
+(require 'path-setting)
 (require 'systype-setting)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; path is used by others ;;
@@ -15,12 +16,11 @@
 (require 'shell-setting)
 (require 'modeline-setting)
 
-(require 'el-get-setting)
+;; (require 'el-get-setting)
 ;; (require 'package-setting)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; keybind is the last to load ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'path-setting)
 (require 'keybind-setting)
 
