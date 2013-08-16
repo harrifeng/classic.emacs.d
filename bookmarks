@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Sudo-Aliyun"
+ (filename . "/sudo:root@112.124.25.29:/")
+ (front-context-string . ".autofsck\n  -rw-")
+ (rear-context-string . " 0 Aug 14 14:32 ")
+ (position . 186))
+("AliYun"
+ (filename . "/ssh:hfeng@112.124.25.29:/home/hfeng/")
+ (front-context-string)
+ (rear-context-string . "24 May 11  2012 ")
+ (position . 374))
+)
