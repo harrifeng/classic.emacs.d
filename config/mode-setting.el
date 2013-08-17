@@ -13,7 +13,7 @@
 ;; makefile mode---------->>
 (add-to-list 'auto-mode-alist '("\\.mak\\'" . makefile-mode))
 
-;; python mode(from Emacs 24.3--->>
+;; python mode(from Emacs 24.3, new python.el is introduced)--->>
 (require 'python)
 (setq
  python-indent-offset 4
@@ -25,3 +25,8 @@
  "';'.join(module_completion('''%s'''))\n"
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+
+;; ruby mode (from Emacs 24, new function introduced for auto-indent)--->>
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (electric-indent-mode t) ))
