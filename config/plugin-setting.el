@@ -92,10 +92,6 @@
 	    (define-key org-mode-map (kbd "C-,") 'set-mark-command)
 	    ))
 
-(setq org-export-html-style
-      "<style type=\"text/css\"> html { font-family: Consolas; font-size: 12pt;} \
-pre{background-color:#002B36;Font:12pt Consolas, Courier New;color:wheat;}</style>")
-
 (setq org-publish-project-alist
       (list
        '("htmlfiles"

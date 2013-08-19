@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("synmsi"
+ (filename . "d:/p4/pacific/SAST/Internal_Service/PythonToolchain/synmsi/")
+ (front-context-string)
+ (rear-context-string . "096 08-07 10:56 ")
+ (position . 367))
+("Auto-Creator1.2"
+ (filename . "d:/p4/pacific/Installer/NI-USI/Auto-Creator/dev/1.2/")
+ (front-context-string . "DBT.exe.debug.lo")
+ (rear-context-string . "028 08-07 10:33 ")
+ (position . 300))
+)
