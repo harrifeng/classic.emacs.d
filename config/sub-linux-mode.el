@@ -1,5 +1,5 @@
-(provide 'sub-unix-mode)
+(provide 'sub-linux-mode)
 ;; Python mode--------------------------------------->>
 (setq
- python-shell-interpreter "/usr/bin/ipython"
+ python-shell-interpreter "/usr/local/bin/ipython"
  python-shell-interpreter-args "")

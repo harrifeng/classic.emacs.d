@@ -47,8 +47,7 @@
  ;; Linux System specific test on Ubuntu 12.04  ;;
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ((eq system-type 'gnu/linux)
-  (require 'sub-unix-mode)
-  (require 'sub-unix-font)
+  (require 'sub-linux-mode)
   (menu-bar-mode t))
  
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
