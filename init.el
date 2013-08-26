@@ -7,14 +7,14 @@
 (require 'basic-setting)
 (require 'helpfunc-setting)
 (require 'systype-setting)
-(require 'path-setting)
+;(require 'path-setting)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; path is used by others ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'plugin-setting)
-(require 'mode-setting)
+;(require 'plugin-setting)
+;(require 'mode-setting)
 (require 'shell-setting)
-(require 'modeline-setting)
+;(require 'modeline-setting)
 
 ;; (require 'el-get-setting)
 ;; (require 'package-setting)
@@ -23,4 +23,3 @@
 ;; keybind is the last to load ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'keybind-setting)
-
