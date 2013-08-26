@@ -6,8 +6,8 @@
 
 (require 'basic-setting)
 (require 'helpfunc-setting)
-(require 'path-setting)
 (require 'systype-setting)
+(require 'path-setting)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; path is used by others ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
