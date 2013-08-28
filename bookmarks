@@ -17,4 +17,14 @@
  (front-context-string)
  (rear-context-string . "24 May 11  2012 ")
  (position . 374))
+("synmsi"
+ (filename . "d:/p4/pacific/SAST/Internal_Service/PythonToolchain/synmsi/")
+ (front-context-string)
+ (rear-context-string . "096 08-07 10:56 ")
+ (position . 367))
+("Auto-Creator1.2"
+ (filename . "d:/p4/pacific/Installer/NI-USI/Auto-Creator/dev/1.2/")
+ (front-context-string . "DBT.exe.debug.lo")
+ (rear-context-string . "028 08-07 10:33 ")
+ (position . 300))
 )

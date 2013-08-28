@@ -37,8 +37,8 @@
   (global-set-key (kbd "<f8>")         'toggle-fullscreen)
 
   ;; Mac Emacs start with fix height and width----------------->>
-  (add-to-list 'default-frame-alist '(height . 50))
-  (add-to-list 'default-frame-alist '(width . 176))
+  (add-to-list 'default-frame-alist '(height . 35))
+  (add-to-list 'default-frame-alist '(width . 100))
 
   ;; menu-bar-mode is useful in mac---------------------------->>
   (menu-bar-mode t))
@@ -47,8 +47,7 @@
  ;; Linux System specific test on Ubuntu 12.04  ;;
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ((eq system-type 'gnu/linux)
-  (require 'sub-unix-mode)
-  (require 'sub-unix-font)
+  (require 'sub-linux-mode)
   (menu-bar-mode t))
  
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -56,6 +55,9 @@
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  ((eq system-type 'cygwin)
+  (require 'sub-nt-font)
+  ;; max windows size on start up------------------------------>>
+  (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
   (menu-bar-mode nil))
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
