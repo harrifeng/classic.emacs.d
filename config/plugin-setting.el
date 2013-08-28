@@ -74,6 +74,7 @@
                           (filename . "\\.md$")
                           (filename . "\\.log$")))
                ("Ruby"   (mode . ruby-mode))
+               ("Magit"  (name . "^\\*magit"))
                ("Docs"   (mode . org-mode))
                ("Dired"  (mode . dired-mode))))))
 

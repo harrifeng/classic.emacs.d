@@ -58,6 +58,8 @@
   (require 'sub-nt-font)
   ;; max windows size on start up------------------------------>>
   (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
+  ;; cygwin use bash------------------------------------------->>
+  (setq explicit-shell-file-name "/bin/bash")
   (menu-bar-mode nil))
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
