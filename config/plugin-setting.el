@@ -11,10 +11,10 @@
 (setq password-cache-expiry 6000)
 ;; usage is like this /sudo:root@host, then select the user name
 (add-to-list 'tramp-default-proxies-alist
-	     '(nil "\\`root\\'" "/ssh:%h:"))
+             '(nil "\\`root\\'" "/ssh:%h:"))
 
 (add-to-list 'tramp-default-proxies-alist
-	     '((regexp-quote (system-name)) nil nil))
+             '((regexp-quote (system-name)) nil nil))
 
 ;; --------uniquify------------------->>
 (require 'uniquify)
@@ -32,47 +32,56 @@
 
 ;;--------recentf------------------>>
 (recentf-mode 1)
- (setq recentf-max-menu-items 100)
+(setq recentf-max-menu-items 100)
 
 ;;--------ibuffer------------------>>
 (require 'ibuffer)
 
 (setq ibuffer-saved-filter-groups
       (quote (("default"
-               ("shell"  (or
-			  (mode . shell-mode)
-			  (mode . eshell-mode)))
-               ("python" (or
-			  (name . "^\\*Py")
-			  (mode . python-mode)))
-               ("ruby"   (mode . ruby-mode))
-               ("html"   (mode . html-mode))
-	       ("cc-c"   (or
-			  (mode . c-mode)
-			  (mode . c++-mode)))
-               ("java"   (mode . java-mode))
-               ("org"    (mode . org-mode))
-	       ("emacs"  (or
-			  (mode . emacs-lisp-mode)
-			  (name . "^\\.emacs$")
-			  (name . "^\\*scratch\\*$")))
-	       ("Make"  (or
-			  (name . "Makefile")
-			  (name . "MAKEFILE")
-			  (filename . "\\.mak$")))
-	       ("bat-sh" (or
-			  (filename . "\\.bat$")
-			  (filename . "\\.sh$")))
-	       ("temp"   (or
-			  (name . "^\\*$")))
-               ("xml"    (mode . nxml-mode))
-               ("dired"  (mode . dired-mode))))))
+               ("Shell"  (or
+                          (mode . shell-mode)
+                          (mode . eshell-mode)))
+               ("Grep"   (or
+                          (mode . grep-mode)
+                          (mode . occur-mode)))
+               ("Python" (or
+                          (name . "^\\*Py")
+                          (mode . python-mode)))
+               ("Sql"    (or
+                          (name . "^\\*SQ")
+                          (mode . sql-mode)))
+               ("XML"    (or
+                          (mode . nxml-mode)
+                          (mode . html-mode)
+                          (mode . js-mode)))
+               ("Make"   (or
+                          (name . "Makefile")
+                          (name . "MAKEFILE")
+                          (filename . "\\.mak$")))
+               ("Emacs"  (or
+                          (mode . emacs-lisp-mode)
+                          (name . "^\\.emacs$")
+                          (name . "^\\*scratch\\*$")))
+               ("C-like" (or
+                          (mode . c-mode)
+                          (mode . java-mode)
+                          (mode . c++-mode)))
+               ("bat-sh" (or
+                          (filename . "\\.bat$")
+                          (filename . "\\.sh$")))
+               ("Log"    (or
+                          (filename . "\\.md$")
+                          (filename . "\\.log$")))
+               ("Ruby"   (mode . ruby-mode))
+               ("Docs"   (mode . org-mode))
+               ("Dired"  (mode . dired-mode))))))
 
 (setq ibuffer-show-empty-filter-groups nil)
 
 (add-hook 'ibuffer-mode-hook
-	  (lambda ()
-	    (ibuffer-switch-to-saved-filter-groups "default")))
+          (lambda ()
+            (ibuffer-switch-to-saved-filter-groups "default")))
 
 ;;--------org-mode------------------>>
 ;; I don't want to use org-mode's auto type subscript.
@@ -88,19 +97,17 @@
 ;; This is because major mode and minor mode's keymaps
 ;; have priority over global keymaps.
 (add-hook 'org-mode-hook
-	  (lambda()
-	    (define-key org-mode-map (kbd "C-,") 'set-mark-command)
-	    ))
+          (lambda()
+            (define-key org-mode-map (kbd "C-,") 'set-mark-command)))
 
 (setq org-publish-project-alist
       (list
        '("htmlfiles"
-	 :base-extension "org"
-	 :publishing-function org-publish-org-to-html
-	 :headline-levels 3
-	 :with-section-numbers nil
-	 :table-of-contents nil
-	 :auto-preamble t
-	 :htmlized-source t
-	 :auto-postamble nil)
-       ))
+         :base-extension "org"
+         :publishing-function org-publish-org-to-html
+         :headline-levels 3
+         :with-section-numbers nil
+         :table-of-contents nil
+         :auto-preamble t
+         :htmlized-source t
+         :auto-postamble nil)))
