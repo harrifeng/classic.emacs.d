@@ -13,7 +13,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'plugin-setting)
 (require 'mode-setting)
-(require 'shell-setting)
 (require 'modeline-setting)
 
 ;; (require 'el-get-setting)

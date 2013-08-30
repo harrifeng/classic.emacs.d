@@ -1,11 +1,14 @@
 (provide 'systype-setting)
+
+(add-to-list 'load-path (concat my-lisps-path "sub"))
+
 (cond
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; OS X system specific test on MAC OS 10.8    ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ((eq system-type 'darwin)
   ;; unix-like path setting------------------------------------>>
-  (require 'sub-unix-path)
+  (require 'sub-mac-path)
   (require 'sub-mac-mode)
   (require 'sub-mac-font)
 
@@ -47,7 +50,9 @@
  ;; Linux System specific test on Ubuntu 12.04  ;;
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ((eq system-type 'gnu/linux)
+  (require 'sub-linux-path)
   (require 'sub-linux-mode)
+  (require 'sub-linux-font)  
   (menu-bar-mode t))
  
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -55,6 +60,7 @@
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  ((eq system-type 'cygwin)
+  (require 'sub-linux-mode)  
   (require 'sub-nt-font)
   ;; max windows size on start up------------------------------>>
   (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
