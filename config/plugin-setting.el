@@ -61,8 +61,7 @@
                           (filename . "\\.mak$")))
                ("Emacs"  (or
                           (mode . emacs-lisp-mode)
-                          (name . "^\\.emacs$")
-                          (name . "^\\*scratch\\*$")))
+                          (name . "^\\.emacs$")))
                ("C-like" (or
                           (mode . c-mode)
                           (mode . java-mode)
@@ -73,6 +72,13 @@
                ("Log"    (or
                           (filename . "\\.md$")
                           (filename . "\\.log$")))
+               ("Manage" (or
+                          (name . "^\\*Bookmark List")
+                          (name . "^\\*Open Recent")
+                          (name . "^\\*Messages")
+                          (name . "^\\*Completions")
+                          (name . "^\\*Compile-Log")
+                          (name . "^\\*scratch\\*$")))
                ("Ruby"   (mode . ruby-mode))
                ("Magit"  (name . "^\\*magit"))
                ("Docs"   (mode . org-mode))
