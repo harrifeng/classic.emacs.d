@@ -1,7 +1,5 @@
-(provide 'sub-unix-font)
+(provide 'sub-linux-font)
 
-(qiang-set-font
- '("Menlo" "Courier New" "Consolas" "Monaco" "DejaVu Sans Mono" "Monospace")
- my-font-size
- '("楷体" "kai" "Microsoft Yahei" "文泉驿等宽微米黑"
-   "黑体" "新宋体" ))
+;; Setting English Font
+(set-face-attribute
+  'default nil :font "Monaco 14")
