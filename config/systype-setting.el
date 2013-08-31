@@ -11,6 +11,7 @@
   (require 'sub-mac-path)
   (require 'sub-mac-mode)
   (require 'sub-mac-font)
+  (require 'sub-gnu-mail)
 
   ;; Command as meta------------------------------------------->>
   (setq mac-option-key-is-meta nil
