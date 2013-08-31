@@ -1,5 +1,15 @@
 (provide 'plugin-setting)
 
+;;--------mail---------------------->>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; use ssl, it will NOT need any support from gnutls or starttls to ;;
+;; send email, tested on Mac and Windows 7                          ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq smtpmail-stream-type 'ssl)
+(setq send-mail-function 'smtpmail-send-it)
+(setq smtpmail-smtp-server "smtp.gmail.com")
+(setq smtpmail-smtp-service 465)
+
 ;;--------tramp-------------------->>
 (require 'tramp)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
