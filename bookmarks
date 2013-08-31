@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("sh-lvtest-ubuntu"
+ (filename . "/ssh:lvtest@sh-lvtest-ubuntu:/home/lvtest/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "51 Aug 27 10:03 ")
+ (position . 203))
+("Sudo-Aliyun"
+ (filename . "/sudo:root@112.124.25.29:/")
+ (front-context-string . ".autofsck\n  -rw-")
+ (rear-context-string . " 0 Aug 14 14:32 ")
+ (position . 186))
+("AliYun"
+ (filename . "/ssh:hfeng@112.124.25.29:/home/hfeng/")
+ (front-context-string)
+ (rear-context-string . "24 May 11  2012 ")
+ (position . 374))
+("synmsi"
+ (filename . "d:/p4/pacific/SAST/Internal_Service/PythonToolchain/synmsi/")
+ (front-context-string)
+ (rear-context-string . "096 08-07 10:56 ")
+ (position . 367))
+("Auto-Creator1.2"
+ (filename . "d:/p4/pacific/Installer/NI-USI/Auto-Creator/dev/1.2/")
+ (front-context-string . "DBT.exe.debug.lo")
+ (rear-context-string . "028 08-07 10:33 ")
+ (position . 300))
+)

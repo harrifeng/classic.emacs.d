@@ -1,5 +1,16 @@
 (provide 'helpfunc-setting)
 
+(defun whack-whitespace (arg)
+  "Delete all white space from point to the next word.  With prefix ARG
+    delete across newlines as well.  The only danger in this is that you
+    don't have to actually be at the end of a word to make it work.  It
+    skips over to the next whitespace and then whacks it all to the next
+    word."
+  (interactive "P")
+  (let ((regexp (if arg "[ \t\n]+" "[ \t]+")))
+    (re-search-forward regexp nil t)
+    (replace-match "" nil nil)))
+
 (defun shell-mode-auto-rename-buffer (text)
   (if (eq major-mode 'shell-mode)
       (rename-buffer  (concat "*Shell: "
@@ -123,3 +134,56 @@
       (set-fontset-font (frame-parameter nil 'font)
                         charset
                         zh-font))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Following is the shell customization ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; run mulitiple shell
+(add-hook 'comint-output-filter-functions 'shell-mode-auto-rename-buffer)
+
+;; run mulitiple eshell
+(add-hook 'eshell-mode-hook
+	  (lambda ()
+	    (rename-buffer (concat "*EShell: "
+				   (concat default-directory "*")) t)))
+
+(add-hook 'eshell-directory-change-hook
+	  (lambda ()
+	    (rename-buffer (concat "*EShell: "
+				   (concat default-directory "*")) t)))
+
+
+;;clean all the buffer content
+(add-hook 'shell-mode-hook 'my-shell-mode-hook)
+
+(setq
+ eshell-save-history-on-exit   t
+ eshell-history-size           512
+ eshell-hist-ignoredups        t
+ eshell-cmpl-ignore-case       t
+ eshell-cp-interactive-query   t
+ eshell-ln-interactive-query   t
+ eshell-mv-interactive-query   t
+ eshell-rm-interactive-query   t
+ eshell-mv-overwrite-files     nil
+ eshell-highlight-prompt   t
+ eshell-prompt-regexp      "^[^#$\n]* [#>]+ "
+ eshell-prompt-function
+ (lambda nil
+   (concat
+    (abbreviate-file-name (eshell/pwd))
+    (if (= (user-uid) 0)
+	" # " " >>> ")))
+ )
+
+;; eshell time spent
+(add-hook 'eshell-load-hook
+          (lambda()(setq last-command-start-time (time-to-seconds))))
+(add-hook 'eshell-pre-command-hook
+          (lambda()(setq last-command-start-time (time-to-seconds))))
+(add-hook 'eshell-before-prompt-hook
+          (lambda()
+	    (message "spend %g seconds"
+		     (- (time-to-seconds) last-command-start-time))))

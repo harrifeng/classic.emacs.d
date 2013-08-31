@@ -1,11 +1,14 @@
 (provide 'systype-setting)
+
+(add-to-list 'load-path (concat my-lisps-path "sub"))
+
 (cond
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; OS X system specific test on MAC OS 10.8    ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ((eq system-type 'darwin)
   ;; unix-like path setting------------------------------------>>
-  (require 'sub-unix-path)
+  (require 'sub-mac-path)
   (require 'sub-mac-mode)
   (require 'sub-mac-font)
 
@@ -37,8 +40,8 @@
   (global-set-key (kbd "<f8>")         'toggle-fullscreen)
 
   ;; Mac Emacs start with fix height and width----------------->>
-  (add-to-list 'default-frame-alist '(height . 50))
-  (add-to-list 'default-frame-alist '(width . 176))
+  (add-to-list 'default-frame-alist '(height . 35))
+  (add-to-list 'default-frame-alist '(width . 100))
 
   ;; menu-bar-mode is useful in mac---------------------------->>
   (menu-bar-mode t))
@@ -47,8 +50,9 @@
  ;; Linux System specific test on Ubuntu 12.04  ;;
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ((eq system-type 'gnu/linux)
-  (require 'sub-unix-mode)
-  (require 'sub-unix-font)
+  (require 'sub-linux-path)
+  (require 'sub-linux-mode)
+  (require 'sub-linux-font)  
   (menu-bar-mode t))
  
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -56,6 +60,12 @@
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  ((eq system-type 'cygwin)
+  (require 'sub-linux-mode)  
+  (require 'sub-nt-font)
+  ;; max windows size on start up------------------------------>>
+  (run-with-idle-timer 1 nil 'w32-send-sys-command 61488)
+  ;; cygwin use bash------------------------------------------->>
+  (setq explicit-shell-file-name "/bin/bash")
   (menu-bar-mode nil))
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

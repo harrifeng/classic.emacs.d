@@ -468,8 +468,9 @@ install the memoized function over the original function."
 (setq-default mode-line-format
               (list "%e"
                     '(:eval (concat
-                             (powerline-rmw            'left   nil  )
-                             (powerline-buffer-id      'left   nil  powerline-color1  )
+                             (powerline-buffer-id      'left   nil  powerline-color2  )
+                             (powerline-rmw            'left        powerline-color2  )
+                             (powerline-narrow         'left        powerline-color2  powerline-color1)
                              (powerline-major-mode     'left        powerline-color1  )
                              (powerline-minor-modes    'left        powerline-color1  )
                              (powerline-narrow         'left        powerline-color1  powerline-color2  )
@@ -481,6 +482,4 @@ install the memoized function over the original function."
                              (powerline-percent        'right  nil  powerline-color1  )
                              (powerline-make-text      "  "    nil  )))))
 
-(provide 'powerline)
 
-;;; powerline.el ends here

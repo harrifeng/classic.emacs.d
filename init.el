@@ -8,12 +8,12 @@
 (require 'helpfunc-setting)
 (require 'path-setting)
 (require 'systype-setting)
+(require 'path-setting)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; path is used by others ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'plugin-setting)
 (require 'mode-setting)
-(require 'shell-setting)
 (require 'modeline-setting)
 
 ;; (require 'el-get-setting)

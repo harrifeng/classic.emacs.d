@@ -12,9 +12,11 @@
   (concat my-python-path "Scripts/"))
 
 (defconst my-git-path (concat my-dropbox-dev "PortableGit/bin/"))
+(defconst my-mingw-path (concat my-dropbox-dev "PortableMingw/bin/"))
 
 (setenv "PATH"
 	(concat
+	 my-mingw-path ";"
 	 my-git-path ";"
 	 my-python-path ";"
 	 my-python-script-path ";"
