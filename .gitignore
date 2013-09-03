@@ -20,6 +20,7 @@ tramp
 # History Fiels #
 #################
 eshell/
+server/
 
 ###############
 # Python Code #
