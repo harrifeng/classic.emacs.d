@@ -1,21 +1,33 @@
 (provide 'el-setting)
 
-;; ;; [A]uto-complete------------------------------------------------------->>
+;; ;; [A]uto-complete-------------------------------------------------------->>
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
-;;
-;; ;; [C]olor theme autoload[package:sublime-themes]------------------------------>>
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [C]olor theme autoload[package:sublime-themes]------------------------->>
 ;; (load-theme 'hickey t)
-;;
-;; ;; [G]rep-a-lot---------------------------------------------------------->>
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [G]rep-a-lot----------------------------------------------------------->>
 ;; (require 'grep-a-lot)
 ;; (grep-a-lot-setup-keys)
-;;
-;; ;; [J]edi plugin-------------------------------------------------->>
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [J]edi plugin---------------------------------------------------------->>
 ;; (add-hook 'python-mode-hook 'jedi:ac-setup)
 ;; (setq jedi:setup-keys t)
-;;
-;; ;; [M]util-web-mode---------------------------------------------------->>
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [H]ighlight-symbol---------------------------------------------------------->>
+;; (setq highlight-symbol-mode t)
+;; (global-set-key [(control f3)] 'highlight-symbol-at-point)
+;; (global-set-key [f3] 'highlight-symbol-next)
+;; (global-set-key [(shift f3)] 'highlight-symbol-prev)
+;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [M]util-web-mode------------------------------------------------------->>
 ;; (require 'multi-web-mode)
 ;; (setq mweb-default-major-mode 'html-mode)
 ;; (setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
@@ -23,16 +35,19 @@
 ;;                   (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
 ;; (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
 ;; (multi-web-global-mode 1)
-;;
-;; ;; [Y]asnippet----------------------------------------------------------->>
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [Y]asnippet------------------------------------------------------------>>
 ;; (require 'yasnippet)
 ;; (yas/initialize)
 ;; (yas/load-directory "~/.emacs.d/path-to-yasnippet/snippets/")
-;;
-;; ;; [Y]asnippet-bundle---------------------------------------------------->>
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [Y]asnippet-bundle----------------------------------------------------->>
 ;; (require 'yasnippet-bundle)
-;;
-;; ;; [Y]asnippet & [Y]asnippet bundle share following setting------------->>
+;; ;;------------------------------------------------------------------------||
+
+;; ;; [Y]asnippet & [Y]asnippet bundle share following setting--------------->>
 ;; ;; modify conflict with org-mode
 ;; (yas-global-mode 1)
 ;; (defun yas/org-very-safe-expand ()
@@ -53,3 +68,4 @@
 ;;         yas/x-prompt
 ;;         yas/completing-prompt
 ;;         yas/no-prompt))
+;; ;;------------------------------------------------------------------------||
