@@ -79,8 +79,8 @@
 ;; different font size for different hosts
 (defconst my-font-size
   (cond
-   ((string-match system-name "hfeng-linux")
-    ":pixelsize=16")
+   ((string-match system-name "hfeng-home")
+    ":pixelsize=18")
    ((string-match system-name "hfeng-air.local")
     ":pixelsize=14")
    ((string-match system-name "hfeng-t60p")

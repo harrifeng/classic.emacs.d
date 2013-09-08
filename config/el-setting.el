@@ -18,6 +18,7 @@
 ;;    magit
 ;;    rainbow-mode
 ;;    sublime-themes
+;;    yasnippet dropdown-list ;; dropdown-list is needed by yasnippet
 ;;    ))
 ;;
 ;; ;; [A]nything-config && [A]nything---------------------------------------->>
@@ -54,7 +55,7 @@
 ;; (setq jedi:setup-keys t)
 ;;
 ;;
-;; ;; [M]agit---------------------------------------------------------->>
+;; ;; [M]agit---------------------------------------------------------------->>
 ;; ;; Nothing to config now
 ;;
 ;; ;; [M]util-web-mode------------------------------------------------------->>
@@ -75,29 +76,11 @@
 ;;
 ;; ;; [S]ublime-themes]------------------------------------------------------>>
 ;; (load-theme 'hickey t)
-
+;;
 ;; ;; [Y]asnippet------------------------------------------------------------>>
 ;; (require 'yasnippet)
-;; (yas/initialize)
-;; (yas/load-directory "~/.emacs.d/path-to-yasnippet/snippets/")
-
-;; ;; [Y]asnippet-bundle----------------------------------------------------->>
-;; (require 'yasnippet-bundle)
-
-;; ;; [Y]asnippet & [Y]asnippet bundle share following setting--------------->>
-;; ;; modify conflict with org-mode
 ;; (yas-global-mode 1)
-;; (defun yas/org-very-safe-expand ()
-;;   (let ((yas/fallback-behavior 'return-nil)) (yas/expand)))
-;;
-;; (add-hook 'org-mode-hook
-;; 	  (lambda ()
-;; 	    (make-variable-buffer-local 'yas/trigger-key)
-;; 	    (setq yas/trigger-key [tab])
-;; 	    (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
-;; 	    (define-key yas/keymap [tab] 'yas/next-field)))
-;;
-;; ;;Right configuration for snippet show without mouse control
+;; ;; [d]ropdown-------------------------------------------<<
 ;; (require 'dropdown-list)
 ;; (setq yas/prompt-functions
 ;;       '(yas/dropdown-prompt
