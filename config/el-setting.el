@@ -1,6 +1,26 @@
 (provide 'el-setting)
 
-;; ;; [A]nything-config--------------------------------------------------------->>
+;; (package-initialize)
+;; ;; check if the packages is installed; if not, install it.
+;; (mapc
+;;  (lambda (package)
+;;    (or (package-installed-p package)
+;;        (if (y-or-n-p (format "Package %s is missing. Install it? " package))
+;;            (package-install package))))
+;;  '(
+;;    anything
+;;    anything-config
+;;    auto-complete
+;;    grep-a-lot
+;;    highlight-symbol
+;;    jedi
+;;    multi-web-mode
+;;    magit
+;;    rainbow-mode
+;;    sublime-themes
+;;    ))
+;;
+;; ;; [A]nything-config && [A]nything---------------------------------------->>
 ;; (require 'anything-config)
 ;; (global-set-key (kbd "C-x b")
 ;;   (lambda() (interactive)
@@ -13,29 +33,30 @@
 ;;         anything-c-source-bookmarks             ;; bookmarks
 ;;         anything-c-source-files-in-current-dir+ ;; current dir
 ;;         anything-c-source-locate))))            ;; use 'locate'
-
+;;
 ;; ;; [A]uto-complete-------------------------------------------------------->>
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
-
-;; ;; [C]olor theme autoload[package:sublime-themes]------------------------->>
-;; (load-theme 'hickey t)
-
+;;
 ;; ;; [G]rep-a-lot----------------------------------------------------------->>
 ;; (require 'grep-a-lot)
 ;; (grep-a-lot-setup-keys)
-
-;; ;; [J]edi plugin---------------------------------------------------------->>
-;; (add-hook 'python-mode-hook 'jedi:ac-setup)
-;; (setq jedi:setup-keys t)
-
+;;
 ;; ;; [H]ighlight-symbol----------------------------------------------------->>
 ;; (setq highlight-symbol-mode t)
 ;; (global-set-key [(control f3)] 'highlight-symbol-at-point)
 ;; (global-set-key [f3] 'highlight-symbol-next)
 ;; (global-set-key [(shift f3)] 'highlight-symbol-prev)
 ;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
-
+;;
+;; ;; [J]edi plugin---------------------------------------------------------->>
+;; (add-hook 'python-mode-hook 'jedi:ac-setup)
+;; (setq jedi:setup-keys t)
+;;
+;;
+;; ;; [M]agit---------------------------------------------------------->>
+;; ;; Nothing to config now
+;;
 ;; ;; [M]util-web-mode------------------------------------------------------->>
 ;; (require 'multi-web-mode)
 ;; (setq mweb-default-major-mode 'html-mode)
@@ -44,6 +65,16 @@
 ;;                   (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
 ;; (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
 ;; (multi-web-global-mode 1)
+;;
+;; ;; [R]ainbow-mode--------------------------------------------------------->>
+;; (require 'rainbow-mode)
+;; (dolist (hook '(css-mode-hook
+;;                 html-mode-hook))
+;;   (add-hook hook (lambda () (rainbow-mode t))))
+;;
+;;
+;; ;; [S]ublime-themes]------------------------------------------------------>>
+;; (load-theme 'hickey t)
 
 ;; ;; [Y]asnippet------------------------------------------------------------>>
 ;; (require 'yasnippet)
