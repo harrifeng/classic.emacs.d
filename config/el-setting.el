@@ -11,6 +11,8 @@
 ;;    anything
 ;;    anything-config
 ;;    auto-complete
+;;    bm
+;;    browse-kill-ring
 ;;    grep-a-lot
 ;;    highlight-symbol
 ;;    jedi
@@ -38,6 +40,12 @@
 ;; ;; [A]uto-complete-------------------------------------------------------->>
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
+;;
+;; ;; [B]-------------------------------------------------------------------->>
+;; ;; Nothing to config now
+;;
+;; ;; [B]rowse-kill-ring----------------------------------------------------->>
+;; ;; Nothing to config now
 ;;
 ;; ;; [G]rep-a-lot----------------------------------------------------------->>
 ;; (require 'grep-a-lot)
@@ -86,7 +94,7 @@
 ;;         ))
 ;; ;; [d]ropdown-------------------------------------------<<
 ;; (require 'dropdown-list)
-;; (setq yas/prompt-functions
+;; (setq yas-prompt-functions
 ;;       '(yas/dropdown-prompt
 ;;         yas/ido-prompt
 ;;         yas/x-prompt
