@@ -8,11 +8,9 @@
        (if (y-or-n-p (format "Package %s is missing. Install it? " package))
            (package-install package))))
  '(
-   anything
    anything-config
+   anything
    auto-complete
-   bm
-   browse-kill-ring
    grep-a-lot
    highlight-symbol
    jedi
@@ -40,12 +38,6 @@
 ;; [A]uto-complete-------------------------------------------------------->>
 (require 'auto-complete-config)
 (ac-config-default)
-
-;; [B]-------------------------------------------------------------------->>
-;; Nothing to config now
-
-;; [B]rowse-kill-ring----------------------------------------------------->>
-;; Nothing to config now
 
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
