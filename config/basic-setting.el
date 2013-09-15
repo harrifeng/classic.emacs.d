@@ -86,7 +86,7 @@
    ((string-match system-name "hfeng-t60p")
     ":pixelsize=20")
    ((string-match system-name "sh-rd-hfeng")
-    ":pixelsize=16")
+    ":pixelsize=14")
    (":pixelsize=14")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
