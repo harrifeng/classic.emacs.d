@@ -3,6 +3,7 @@
 (global-set-key (kbd "C-c C-u")      'cua-mode)
 (global-set-key (kbd "C-c C-m")      'execute-extended-command)
 (global-set-key (kbd "C-x C-m")      'execute-extended-command)
+(global-set-key (kbd "C-x m")        'bm-toggle)
 (global-set-key (kbd "C-x C-k")      'kill-region)
 (global-set-key (kbd "C-x C-r")      'recentf-open-files)
 (global-set-key (kbd "C-x C-y")      'kill-ring-save)

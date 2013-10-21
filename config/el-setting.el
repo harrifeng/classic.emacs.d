@@ -75,7 +75,7 @@
 
 
 ;; [S]ublime-themes]------------------------------------------------------>>
-(load-theme 'hickey t)
+;; (load-theme 'hickey t)
 
 ;; [Y]asnippet------------------------------------------------------------>>
 (require 'yasnippet)
