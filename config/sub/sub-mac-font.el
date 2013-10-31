@@ -1,5 +1,7 @@
 (provide 'sub-mac-font)
 
-;; Setting English Font
-(set-face-attribute
-  'default nil :font "Monaco 14")
+(qiang-set-font
+ '("PT Mono" "Consolas" "Menlo" "Courier New"  "Monaco" "DejaVu Sans Mono" "Monospace")
+ my-font-size
+ '("楷体" "kai" "Microsoft Yahei" "文泉驿等宽微米黑"
+   "黑体" "新宋体" ))
