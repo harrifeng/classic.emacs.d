@@ -11,6 +11,7 @@
    anything-config
    anything
    auto-complete
+   bm-toggle
    grep-a-lot
    highlight-symbol
    jedi
@@ -38,6 +39,10 @@
 ;; [A]uto-complete-------------------------------------------------------->>
 (require 'auto-complete-config)
 (ac-config-default)
+
+;; [B]m-toogle------------------------------------------------------------>>
+(rqueire 'bm-toggle)
+(global-set-key (kbd "C-x m")        'bm-toggle)
 
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)

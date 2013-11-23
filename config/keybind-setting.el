@@ -5,7 +5,6 @@
 (global-set-key (kbd "C-x C-m")      'execute-extended-command)
 (global-set-key (kbd "C-c C-a")      'mark-whole-buffer)
 (global-set-key (kbd "C-x C-a")      'mark-whole-buffer)
-(global-set-key (kbd "C-x m")        'bm-toggle)
 (global-set-key (kbd "C-x C-k")      'kill-region)
 (global-set-key (kbd "C-x C-r")      'recentf-open-files)
 (global-set-key (kbd "C-x C-y")      'kill-ring-save)
