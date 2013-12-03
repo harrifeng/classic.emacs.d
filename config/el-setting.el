@@ -11,8 +11,10 @@
    anything-config
    anything
    auto-complete
+   bm
    grep-a-lot
    highlight-symbol
+   highline
    jedi
    multi-web-mode
    magit
@@ -38,6 +40,10 @@
 ;; [A]uto-complete-------------------------------------------------------->>
 (require 'auto-complete-config)
 (ac-config-default)
+
+;; [B]m-toogle------------------------------------------------------------>>
+(require 'bm)
+(global-set-key (kbd "C-x m")        'bm-toggle)
 
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
