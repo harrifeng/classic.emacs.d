@@ -15,6 +15,7 @@ tramp
 *.elc
 *~
 .emacs_custom.el
+anything*
 
 #################
 # History Fiels #

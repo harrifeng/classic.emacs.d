@@ -1,5 +1,6 @@
 (provide 'systype-setting)
 
+
 (add-to-list 'load-path (concat my-lisps-path "sub"))
 
 (cond
@@ -60,6 +61,7 @@
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
  ((eq system-type 'cygwin)
+  (require 'sub-linux-path)
   (require 'sub-linux-mode)  
   (require 'sub-nt-font)
   ;; max windows size on start up------------------------------>>

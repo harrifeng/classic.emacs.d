@@ -83,8 +83,8 @@
 
 
 ;; [S]ublime-themes]------------------------------------------------------>>
-;; (load-theme 'hickey t)
-(load-theme 'wheatgrass t)
+(load-theme 'hickey t)
+;; (load-theme 'wheatgrass t)
 
 ;; [Y]asnippet------------------------------------------------------------>>
 (require 'yasnippet)

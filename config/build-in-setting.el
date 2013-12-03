@@ -20,8 +20,11 @@
 ;; tramp setting password keep time
 (setq password-cache-expiry 6000)
 ;; usage is like this /sudo:root@host, then select the user name
-(add-to-list 'tramp-default-proxies-alist
-             '(nil "\\`root\\'" "/ssh:%h:"))
+(if (string-equal system-type "windows-nt")
+    (add-to-list 'tramp-default-proxies-alist
+                 '(nil "\\`root\\'" "/plink:%h:"))
+  (add-to-list 'tramp-default-proxies-alist
+               '(nil "\\`root\\'" "/ssh:%h:")))
 
 (add-to-list 'tramp-default-proxies-alist
              '((regexp-quote (system-name)) nil nil))
