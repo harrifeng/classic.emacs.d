@@ -51,16 +51,18 @@
 (setq byte-compile-verbose nil)
 (setq font-lock-verbose t)
 
+;;encoding from stackoverflow
+;;http://stackoverflow.com/questions/2901541/which-coding-system-should-i-use-in-emacs
+(setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
 (set-language-environment 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-clipboard-coding-system 'euc-cn)
+(set-keyboard-coding-system 'utf-8-mac) ; For old Carbon emacs on OS X only
+(setq locale-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
-(set-buffer-file-coding-system 'euc-cn)
-(set-selection-coding-system 'euc-cn)
-(modify-coding-system-alist 'process "*" 'utf-8)
-(setq default-process-coding-system
-            '(euc-cn . euc-cn))
-(setq-default pathname-coding-system 'utf-8)
+(unless (eq system-type 'windows-nt)
+  (set-selection-coding-system 'utf-8))
+(prefer-coding-system 'utf-8)
+
 
 ;; grep-windows-height
 (setq compilation-window-height 12)
