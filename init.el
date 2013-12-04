@@ -25,4 +25,3 @@
 ;; keybind is the last to load ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'keybind-setting)
-

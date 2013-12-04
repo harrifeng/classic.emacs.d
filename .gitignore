@@ -9,6 +9,7 @@ url/
 ##############
 # Temp Files #
 ##############
+.abbrev_defs
 tramp
 .#*
 #*
