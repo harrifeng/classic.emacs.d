@@ -20,7 +20,7 @@
    magit
    rainbow-mode
    sublime-themes
-   yasnippet dropdown-list ;; dropdown-list is needed by yasnippet
+   yasnippet dropdown-list ;; dropdown-list is needed by yasnippet   
    ))
 
 ;; [A]nything-config && [A]nything---------------------------------------->>
