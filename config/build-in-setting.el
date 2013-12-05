@@ -173,11 +173,22 @@
          </div>
          "
          :html-postamble
-         ;; " 评论系统代码(disqus,多说等等)<p class=\"author\">Author: %a (%e)</p><p>Last Updated %d . Created by %c </p>"
          "
-
-         "
-         )
+         <!-- Duoshuo Comment BEGIN -->
+         <div class=\"ds-thread\"></div>
+         <script type=\"text/javascript\">
+             var duoshuoQuery = {short_name:\"harrifeng\"};
+             (function() {
+             var ds = document.createElement('script');
+             ds.type = 'text/javascript';ds.async = true;
+             ds.src = 'http://static.duoshuo.com/embed.js';
+             ds.charset = 'UTF-8';
+             (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+             })();
+         </script>
+         <!-- Duoshuo Comment END -->
+         ")
         ("blog-static"
          :base-directory "~/orgblog/org/"
          :base-extension "css\\|js\\|pdf\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
