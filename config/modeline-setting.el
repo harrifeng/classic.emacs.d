@@ -414,7 +414,7 @@ install the memoized function over the original function."
                          (propertize "[RO]" 'face 'mode-line-read-only-face))
                         ((buffer-modified-p)
                          (propertize "[MD]" 'face 'mode-line-modified-face))
-                        (t "[UN]")))
+                        (t "[SD]")))
 (defpowerline coding (let* ((code (symbol-name buffer-file-coding-system))
                             (eol-type (coding-system-eol-type buffer-file-coding-system))
                             (eol (if (eq 0 eol-type) "UNIX"

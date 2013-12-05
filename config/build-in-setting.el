@@ -131,3 +131,60 @@
          :auto-preamble t
          :htmlized-source t
          :auto-postamble nil)))
+
+;; org-mode blog (require orgmode version 8.0)
+
+(setq org-publish-project-alist
+      '(
+        ("blog-notes"
+         :base-directory "~/orgblog/org/"
+         :base-extension "org"
+         :publishing-directory "~/orgblog/blog/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :html-link-home "index.html"
+         :html-link-up "sitemap.html"
+         :headline-levels 5
+         :section-numbers nil
+         :auto-preamble t
+         :auto-sitemap t ; Generate sitemap.org automagically...
+         :sitemap-filename "sitemap.org" ; ... call it sitemap.org (it's the default)...
+         :sitemap-title "Sitemap" ; ... with title 'Sitemap'.
+         :author "your name"
+         :email "your email"
+         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\"/>"
+         :html-preamble
+         "
+         <div id=\"header\">
+            <div id=\"header-top\">
+                <div id=\"blog-title\">Harrifeng's Path</div>
+                <div id=\"blog-sub-title\"></div>
+            </div>
+            <div id=\"nav\">
+                <ul>
+                    <li><a href=\"/\">首页</a></li>
+                    <li><a href=\"/notes.html\">读书笔记</a></li>
+                    <li><a href=\"/about.html\">About</a></li>
+                    <li><a href=\"/atom.xml\">RSS</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+         </div>
+         "
+         :html-postamble
+         ;; " 评论系统代码(disqus,多说等等)<p class=\"author\">Author: %a (%e)</p><p>Last Updated %d . Created by %c </p>"
+         "
+
+         "
+         )
+        ("blog-static"
+         :base-directory "~/orgblog/org/"
+         :base-extension "css\\|js\\|pdf\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
+         :publishing-directory "~/orgblog/blog/"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("blog" :components ("blog-notes" "blog-static"))
+        ;;
+        ))
