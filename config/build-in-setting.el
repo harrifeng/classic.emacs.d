@@ -120,6 +120,10 @@
           (lambda()
             (define-key org-mode-map (kbd "C-,") 'set-mark-command)))
 
+(defconst my-blog-url "http://localhost:8765/")
+(defconst my-link-home (concat my-blog-url "index.html"))
+(defconst my-link-up (concat my-blog-url "sitemap.html"))
+
 (setq org-publish-project-alist
       (list
        '("htmlfiles"
@@ -142,8 +146,8 @@
          :publishing-directory "~/orgblog/blog/"
          :recursive t
          :publishing-function org-html-publish-to-html
-         :html-link-home "index.html"
-         :html-link-up "sitemap.html"
+         :html-link-home "http://harrifeng.github.io/index.html"
+         :html-link-up "http://harrifeng.github.io/sitemap.html"
          :headline-levels 5
          :section-numbers nil
          :auto-preamble t
@@ -152,7 +156,7 @@
          :sitemap-title "Sitemap" ; ... with title 'Sitemap'.
          :author "your name"
          :email "your email"
-         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/main.css\"/>"
+         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/main.css\"/>"
          :html-preamble
          "
          <div id=\"header\">
