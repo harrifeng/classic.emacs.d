@@ -1,5 +1,0 @@
-# name: begin_src ... end_src 
-# key: src
-# --
-#+begin_src ${1:c++} $0
-#+end_src
