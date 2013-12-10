@@ -15,6 +15,7 @@
    grep-a-lot
    highlight-symbol
    highline
+   htmlize   
    jedi
    multi-web-mode
    magit
