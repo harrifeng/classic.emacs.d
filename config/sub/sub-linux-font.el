@@ -2,4 +2,4 @@
 
 ;; Setting English Font
 (set-face-attribute
-  'default nil :font "Monaco 14")
+  'default nil :font "Courier 10 Pitch 14")
