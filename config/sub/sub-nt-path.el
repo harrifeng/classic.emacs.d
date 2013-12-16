@@ -23,6 +23,7 @@
 (defconst my-tool-path (concat my-dropbox-dev "Tools/"))
 (defconst my-tcc-path (concat my-dropbox-dev "tcc/"))
 (defconst my-mingw-path (concat my-dropbox-dev "MingW/bin/"))
+(defconst my-java-path (concat my-dropbox-dev "java7/bin/"))
 
 (setenv "PATH"
         (concat
@@ -32,4 +33,5 @@
          my-python-script-path ";"
          my-tcc-path ";"
          my-mingw-path ";"
+         my-java-path ";"
          (getenv "PATH")))

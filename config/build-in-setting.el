@@ -207,3 +207,9 @@
         ("blog" :components ("blog-notes" "blog-static"))
         ;;
         ))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t))) ; this line activates ditaa
+
+
