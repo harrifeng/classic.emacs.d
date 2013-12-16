@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("harrifeng.info-root"
+(("Scientific-Linux-Hfeng"
+ (filename . "/plink:hfeng@10.144.20.144:/home/hfeng/")
+ (front-context-string . ".ICEauthority\n  ")
+ (rear-context-string . "240 12-12 14:55 ")
+ (position . 195))
+("Scientific-Linux-64"
+ (filename . "/sudo:root@10.144.20.144:/etc/")
+ (front-context-string . "\n  drwxr-x---  3")
+ (rear-context-string . "2-01-31  at.deny")
+ (position . 1153))
+("harrifeng.info-root"
  (filename . "/sudo:root@harrifeng.info:/")
  (front-context-string . "bin -> usr/bin\n ")
  (rear-context-string . " 7 Jun  1 02:40 ")
