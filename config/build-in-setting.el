@@ -156,13 +156,17 @@
          :sitemap-title "Sitemap" ; ... with title 'Sitemap'.
          :author "your name"
          :email "your email"
-         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/main.css\"/>"
+         :html-head
+         "
+         <link href=\"http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Galdeano|Open+Sans:600italic,400,600|Roboto+Condensed:400,700\" rel=\"stylesheet\" type=\"text/css\">
+         <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/main.css\"/>
+         "
          :html-preamble
          "
          <div id=\"header\">
             <div id=\"header-top\">
                 <div id=\"blog-title\">Harrifeng's Path</div>
-                <div id=\"blog-sub-title\"></div>
+                <div id=\"blog-sub-title\">纸上得来终觉浅,绝知此事要Coding</div>
             </div>
             <div id=\"nav\">
                 <ul>
