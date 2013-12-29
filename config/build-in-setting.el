@@ -191,7 +191,7 @@
              ds.type = 'text/javascript';ds.async = true;
              ds.src = 'http://static.duoshuo.com/embed.js';
              ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0] 
+             (document.getElementsByTagName('head')[0]
              || document.getElementsByTagName('body')[0]).appendChild(ds);
              })();
          </script>
@@ -210,6 +210,6 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((ditaa . t))) ; this line activates ditaa
-
-
+ '((dot . t))) ; this line activates ditaa
+;; no confirm
+(setq org-confirm-babel-evaluate nil)
