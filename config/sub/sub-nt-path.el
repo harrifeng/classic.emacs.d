@@ -16,6 +16,12 @@
 (defconst my-java-path
   (concat my-dev "Java/bin/"))
 
+(defconst my-java-util-path
+  (concat my-dev "JavaUtil/"))
+
+(defconst my-ant-path
+  (concat my-java-util-path "ant/bin"))
+
 (defconst my-graphviz-path
   (concat my-dev "Graphviz/bin/"))
 
@@ -26,5 +32,6 @@
          my-python-path ";"
          my-python-script-path ";"
          my-java-path ";"
+         my-ant-path ";"
          my-graphviz-path ";"
          (getenv "PATH")))
