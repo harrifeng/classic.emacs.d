@@ -21,4 +21,3 @@
 (global-set-key (kbd "M-;")          'qiang-comment-dwim-line)
 (global-set-key (kbd "M-/")          'hippie-expand)
 (global-set-key (kbd "C-j")          'newline-and-indent)
-(global-set-key (kbd "RET")          'electric-indent-just-newline)
