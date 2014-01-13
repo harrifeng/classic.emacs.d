@@ -20,3 +20,4 @@
 (global-set-key (kbd "<C-f11>")      'toggle-tool-bar-mode-from-frame)
 (global-set-key (kbd "M-;")          'qiang-comment-dwim-line)
 (global-set-key (kbd "M-/")          'hippie-expand)
+(global-set-key (kbd "C-j")          'newline-and-indent)
