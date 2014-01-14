@@ -5,11 +5,10 @@
 (mapc
  (lambda (package)
    (or (package-installed-p package)
-       (if (y-or-n-p (format "Package %s is missing. Install it? " package))
-           (package-install package))))
+       (package-install package)))
  '(
-   anything-config
    anything
+   anything-config
    auto-complete
    bm
    grep-a-lot
@@ -19,7 +18,6 @@
    jedi
    multi-web-mode
    magit
-   rainbow-mode
    sublime-themes
    yasnippet dropdown-list ;; dropdown-list is needed by yasnippet   
    ))
@@ -83,10 +81,10 @@
 (multi-web-global-mode 1)
 
 ;; [R]ainbow-mode--------------------------------------------------------->>
-(require 'rainbow-mode)
-(dolist (hook '(css-mode-hook
-                html-mode-hook))
-  (add-hook hook (lambda () (rainbow-mode t))))
+;; (require 'rainbow-mode)
+;; (dolist (hook '(css-mode-hook
+;;                 html-mode-hook))
+;;   (add-hook hook (lambda () (rainbow-mode t))))
 
 
 ;; [S]ublime-themes]------------------------------------------------------>>
