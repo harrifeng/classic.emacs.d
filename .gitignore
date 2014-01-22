@@ -62,3 +62,8 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+################
+# recent file  #
+################
+recentf
