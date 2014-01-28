@@ -12,6 +12,8 @@
   (require 'sub-mac-path)
   (require 'sub-mac-mode)
   (require 'sub-mac-font)
+  ;; mac use bash------------------------------------------->>
+  (setq explicit-shell-file-name "/bin/bash")
 
   ;; Command as meta------------------------------------------->>
   (setq mac-option-key-is-meta nil

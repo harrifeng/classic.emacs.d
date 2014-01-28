@@ -111,6 +111,28 @@
 ;; not be interpreted as a subscript, but 'a_{b}' will.
 (setq org-export-with-sub-superscripts nil)
 
+;; This will disable the auto footnote
+(setq org-export-with-footnotes nil)
+
+;; This setting removes the ("/", italic) , so the /italic/ will not work
+(setq org-emphasis-alist
+   (quote
+    (("*" bold)
+     ("~" org-verbatim verbatim)
+     ("+"
+      (:strike-through t)))))
+
+ ;; (setq org-emphasis-alist
+ ;;        (append org-emphasis-alist
+ ;;                '((" <at> " org-warning "<b>" "</b>"))))
+ ;;  (setq org-export-latex-emphasis-alist
+ ;;        (append org-export-latex-emphasis-alist
+ ;;                '((" <at> " "\\alert{%s}" nil))))
+
+;; this is a minimal example
+
+
+
 ;; When you have made some personal keyboard shortcuts in
 ;; emacs using global-set-key, both major modes and minor
 ;; modes will override those if it uses the same keys.
