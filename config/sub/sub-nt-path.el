@@ -13,6 +13,9 @@
 (defconst my-git-path
   (concat my-dev "Git/bin/"))
 
+(defconst my-mingw-path
+  (concat my-dev "MinGW/bin/"))
+
 (defconst my-tool-path
   (concat my-dev "Tools/"))
 
@@ -36,6 +39,7 @@
          my-python-script-path ";"
          my-java-path ";"
          my-ant-path ";"
+         my-mingw-path ";"
          my-graphviz-path ";"
          my-util-path ";"
          (getenv "PATH")))
