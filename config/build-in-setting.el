@@ -142,93 +142,106 @@
           (lambda()
             (define-key org-mode-map (kbd "C-,") 'set-mark-command)))
 
-(defconst my-blog-url "http://localhost:8765/")
-(defconst my-link-home (concat my-blog-url "index.html"))
-(defconst my-link-up (concat my-blog-url "sitemap.html"))
+;; (defconst my-blog-url "http://localhost:8765/")
+;; (defconst my-link-home (concat my-blog-url "index.html"))
+;; (defconst my-link-up (concat my-blog-url "sitemap.html"))
+;; 
+;; (setq org-publish-project-alist
+;;       (list
+;;        '("htmlfiles"
+;;          :base-extension "org"
+;;          :publishing-function org-publish-org-to-html
+;;          :headline-levels 3
+;;          :with-section-numbers nil
+;;          :table-of-contents nil
+;;          :auto-preamble t
+;;          :htmlized-source t
+;;          :auto-postamble nil)))
+;; 
+;; ;; org-mode blog (require orgmode version 8.0)
+;; 
+;; (setq org-publish-project-alist
+;;       '(
+;;         ("blog-notes"
+;;          :base-directory "~/orgblog/org/"
+;;          :base-extension "org"
+;;          :publishing-directory "~/orgblog/blog/"
+;;          :recursive t
+;;          :publishing-function org-html-publish-to-html
+;;          :html-link-home "http://harrifeng.github.io/index.html"
+;;          :html-link-up "http://harrifeng.github.io/sitemap.html"
+;;          :headline-levels 5
+;;          :section-numbers nil
+;;          :auto-preamble t
+;;          :auto-sitemap t ; Generate sitemap.org automagically...
+;;          :sitemap-filename "sitemap.org" ; ... call it sitemap.org (it's the default)...
+;;          :sitemap-title "Sitemap" ; ... with title 'Sitemap'.
+;;          :author "your name"
+;;          :email "your email"
+;;          :html-head
+;;          "
+;;          <link href=\"http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Galdeano|Open+Sans:600italic,400,600|Roboto+Condensed:400,700\" rel=\"stylesheet\" type=\"text/css\">
+;;          <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/main.css\"/>
+;;          "
+;;          :html-preamble
+;;          "
+;;          <div id=\"header\">
+;;             <div id=\"header-top\">
+;;                 <div id=\"blog-title\">Harrifeng's Path</div>
+;;                 <div id=\"blog-sub-title\">纸上得来终觉浅,绝知此事要Coding</div>
+;;             </div>
+;;             <div id=\"nav\">
+;;                 <ul>
+;;                     <li><a href=\"/\">首页</a></li>
+;;                     <li><a href=\"/notes.html\">读书笔记</a></li>
+;;                     <li><a href=\"/about.html\">About</a></li>
+;;                     <li><a href=\"/atom.xml\">RSS</a></li>
+;;                     <li>
+;;                     </li>
+;;                 </ul>
+;;             </div>
+;;          </div>
+;;          "
+;;          :html-postamble
+;;          "
+;;          <!-- Duoshuo Comment BEGIN -->
+;;          <div class=\"ds-thread\"></div>
+;;          <script type=\"text/javascript\">
+;;              var duoshuoQuery = {short_name:\"harrifeng\"};
+;;              (function() {
+;;              var ds = document.createElement('script');
+;;              ds.type = 'text/javascript';ds.async = true;
+;;              ds.src = 'http://static.duoshuo.com/embed.js';
+;;              ds.charset = 'UTF-8';
+;;              (document.getElementsByTagName('head')[0]
+;;              || document.getElementsByTagName('body')[0]).appendChild(ds);
+;;              })();
+;;          </script>
+;;          <!-- Duoshuo Comment END -->
+;;          ")
+;;         ("blog-static"
+;;          :base-directory "~/orgblog/org/"
+;;          :base-extension "css\\|js\\|pdf\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
+;;          :publishing-directory "~/orgblog/blog/"
+;;          :recursive t
+;;          :publishing-function org-publish-attachment
+;;          )
+;;         ("blog" :components ("blog-notes" "blog-static"))
+;;         ;;
+;;         ))
 
-(setq org-publish-project-alist
-      (list
-       '("htmlfiles"
-         :base-extension "org"
-         :publishing-function org-publish-org-to-html
-         :headline-levels 3
-         :with-section-numbers nil
-         :table-of-contents nil
-         :auto-preamble t
-         :htmlized-source t
-         :auto-postamble nil)))
+(setq org-publish-project-alist 
+'("test-base"
+    :body-only t
+    :base-directory "/Users/hfeng/test/hfeng"
+    :publishing-directory "/Users/hfeng/test/hushaw.github.com/_post")) 
 
-;; org-mode blog (require orgmode version 8.0)
 
-(setq org-publish-project-alist
-      '(
-        ("blog-notes"
-         :base-directory "~/orgblog/org/"
-         :base-extension "org"
-         :publishing-directory "~/orgblog/blog/"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :html-link-home "http://harrifeng.github.io/index.html"
-         :html-link-up "http://harrifeng.github.io/sitemap.html"
-         :headline-levels 5
-         :section-numbers nil
-         :auto-preamble t
-         :auto-sitemap t ; Generate sitemap.org automagically...
-         :sitemap-filename "sitemap.org" ; ... call it sitemap.org (it's the default)...
-         :sitemap-title "Sitemap" ; ... with title 'Sitemap'.
-         :author "your name"
-         :email "your email"
-         :html-head
-         "
-         <link href=\"http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Galdeano|Open+Sans:600italic,400,600|Roboto+Condensed:400,700\" rel=\"stylesheet\" type=\"text/css\">
-         <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/main.css\"/>
-         "
-         :html-preamble
-         "
-         <div id=\"header\">
-            <div id=\"header-top\">
-                <div id=\"blog-title\">Harrifeng's Path</div>
-                <div id=\"blog-sub-title\">纸上得来终觉浅,绝知此事要Coding</div>
-            </div>
-            <div id=\"nav\">
-                <ul>
-                    <li><a href=\"/\">首页</a></li>
-                    <li><a href=\"/notes.html\">读书笔记</a></li>
-                    <li><a href=\"/about.html\">About</a></li>
-                    <li><a href=\"/atom.xml\">RSS</a></li>
-                    <li>
-                    </li>
-                </ul>
-            </div>
-         </div>
-         "
-         :html-postamble
-         "
-         <!-- Duoshuo Comment BEGIN -->
-         <div class=\"ds-thread\"></div>
-         <script type=\"text/javascript\">
-             var duoshuoQuery = {short_name:\"harrifeng\"};
-             (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-             })();
-         </script>
-         <!-- Duoshuo Comment END -->
-         ")
-        ("blog-static"
-         :base-directory "~/orgblog/org/"
-         :base-extension "css\\|js\\|pdf\\|png\\|jpg\\|gif\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/orgblog/blog/"
-         :recursive t
-         :publishing-function org-publish-attachment
-         )
-        ("blog" :components ("blog-notes" "blog-static"))
-        ;;
-        ))
+(add-to-list 'load-path "/Users/hfeng/test/org-jekyll-mode")
+(require 'org-jekyll-mode)
+(setq org-jekyll/jekyll-project-root "/Users/hfeng/test/hushaw.github.com")
+(setq org-jekyll/org-mode-project-root "/Users/hfeng/test/hfeng")
+
 
 (org-babel-do-load-languages
  'org-babel-load-languages
