@@ -122,6 +122,11 @@
      ("+"
       (:strike-through t)))))
 
+;; This setting will add border for the table, require  org-mode version > 8.0
+(setq org-html-table-default-attributes
+   (quote
+    (:border "2" :cellspacing "0" :cellpadding "6" :rules "all" :frame "border")))
+
  ;; (setq org-emphasis-alist
  ;;        (append org-emphasis-alist
  ;;                '((" <at> " org-warning "<b>" "</b>"))))
