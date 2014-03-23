@@ -199,8 +199,8 @@
                 <ul>
                     <li><a href=\"/\">首页</a></li>
                     <li><a href=\"/notes.html\">读书笔记</a></li>
-                    <li><a href=\"/about.html\">About</a></li>
-                    <li><a href=\"/atom.xml\">RSS</a></li>
+                    <li><a href=\"/algo.html\">算法</a></li>
+                    <li><a href=\"/about.html\">About Me</a></li>
                     <li>
                     </li>
                 </ul>
@@ -209,20 +209,20 @@
          "
          :html-postamble
          "
-         <!-- Duoshuo Comment BEGIN -->
-         <div class=\"ds-thread\"></div>
-         <script type=\"text/javascript\">
-             var duoshuoQuery = {short_name:\"harrifeng\"};
-             (function() {
-             var ds = document.createElement('script');
-             ds.type = 'text/javascript';ds.async = true;
-             ds.src = 'http://static.duoshuo.com/embed.js';
-             ds.charset = 'UTF-8';
-             (document.getElementsByTagName('head')[0]
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-             })();
-         </script>
-         <!-- Duoshuo Comment END -->
+         <!-- Disqus Comment BEGIN -->
+          <div id=\"disqus_thread\"></div>
+          <script type=\"text/javascript\">
+              var disqus_shortname = 'harrifeng'; 
+          
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href=\"http://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>
+
+         <!-- Disqus Comment END -->
          ")
         ("blog-static"
          :base-directory "~/orgblog/org/"
