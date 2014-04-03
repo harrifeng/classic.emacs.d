@@ -19,7 +19,6 @@
 
 (setq ring-bell-function 'ignore)
 
-(setq ispell-program-name "aspell.exe")
 
 ;;auto expand
 (setq hippie-expand-try-functions-list
