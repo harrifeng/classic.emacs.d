@@ -11,7 +11,6 @@
    anything-config
    auto-complete
    bm
-   enh-ruby-mode
    grep-a-lot
    highlight-symbol
    highline
@@ -45,20 +44,6 @@
 ;; [B]m-toogle------------------------------------------------------------>>
 (require 'bm)
 (global-set-key (kbd "C-x m")        'bm-toggle)
-
-;; [E]nh-ruby-mode-------------------------------------------------------->>
-(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
- 
-(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
- 
-(setq enh-ruby-bounce-deep-indent t)
-(setq enh-ruby-hanging-brace-indent-level 2)
 
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
