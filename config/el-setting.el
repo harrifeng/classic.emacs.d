@@ -18,6 +18,7 @@
    jedi
    multi-web-mode
    magit
+   inf-ruby
    sublime-themes
    yasnippet dropdown-list ;; dropdown-list is needed by yasnippet   
    ))
@@ -86,10 +87,12 @@
 ;;                 html-mode-hook))
 ;;   (add-hook hook (lambda () (rainbow-mode t))))
 
+;; [I]nf-ruby------------------------------------------------------------->>
+;; ruby shell mode
 
 ;; [S]ublime-themes]------------------------------------------------------>>
-(load-theme 'hickey t)
-;; (load-theme 'wheatgrass t)
+;; (load-theme 'hickey t)
+(load-theme 'wheatgrass t)
 
 ;; [Y]asnippet------------------------------------------------------------>>
 (require 'yasnippet)

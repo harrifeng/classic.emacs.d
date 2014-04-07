@@ -5,6 +5,9 @@
 (defconst my-util-path
   (concat my-dev "Util/"))
 
+(defconst my-ruby-path
+  (concat my-dev "Ruby/bin/"))
+
 (defconst my-python-path
   (concat my-dev "Python/App/"))
 (defconst my-python-script-path
@@ -36,6 +39,7 @@
          my-tool-path ";"
          my-git-path ";"
          my-python-path ";"
+         my-ruby-path ";"
          my-python-script-path ";"
          my-java-path ";"
          my-ant-path ";"
