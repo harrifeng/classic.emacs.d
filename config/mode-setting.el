@@ -27,6 +27,6 @@
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
 ;; ruby mode (from Emacs 24, new function introduced for auto-indent)--->>
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (electric-indent-mode t) ))
+;; (add-hook 'ruby-mode-hook
+;;           (lambda ()
+;;             (electric-indent-mode t) ))

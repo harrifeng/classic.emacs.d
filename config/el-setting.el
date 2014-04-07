@@ -11,6 +11,7 @@
    anything-config
    auto-complete
    bm
+   enh-ruby-mode
    grep-a-lot
    highlight-symbol
    highline
@@ -45,6 +46,20 @@
 (require 'bm)
 (global-set-key (kbd "C-x m")        'bm-toggle)
 
+;; [E]nh-ruby-mode-------------------------------------------------------->>
+(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+ 
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+ 
+(setq enh-ruby-bounce-deep-indent t)
+(setq enh-ruby-hanging-brace-indent-level 2)
+
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
 (grep-a-lot-setup-keys)
@@ -63,6 +78,9 @@
 
 ;; To customize the background color
 (set-face-background 'highline-face "#333")
+
+;; [I]nf-ruby------------------------------------------------------------->>
+;; ruby shell mode
 
 ;; [J]edi plugin---------------------------------------------------------->>
 (add-hook 'python-mode-hook 'jedi:ac-setup)
@@ -87,8 +105,6 @@
 ;;                 html-mode-hook))
 ;;   (add-hook hook (lambda () (rainbow-mode t))))
 
-;; [I]nf-ruby------------------------------------------------------------->>
-;; ruby shell mode
 
 ;; [S]ublime-themes]------------------------------------------------------>>
 ;; (load-theme 'hickey t)
