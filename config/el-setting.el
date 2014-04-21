@@ -15,7 +15,6 @@
    highlight-symbol
    highline
    htmlize   
-   jedi
    multi-web-mode
    magit
    inf-ruby
@@ -66,11 +65,6 @@
 
 ;; [I]nf-ruby------------------------------------------------------------->>
 ;; ruby shell mode
-
-;; [J]edi plugin---------------------------------------------------------->>
-(add-hook 'python-mode-hook 'jedi:ac-setup)
-(setq jedi:setup-keys t)
-
 
 ;; [M]agit---------------------------------------------------------------->>
 ;; Nothing to config now
