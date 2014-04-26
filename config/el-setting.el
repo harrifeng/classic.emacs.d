@@ -7,6 +7,7 @@
    (or (package-installed-p package)
        (package-install package)))
  '(
+   ag
    anything
    anything-config
    auto-complete
@@ -21,6 +22,8 @@
    sublime-themes
    yasnippet dropdown-list ;; dropdown-list is needed by yasnippet   
    ))
+;; [A]g------------------------------------------------------------------->>
+(setq ag-highlight-search t)
 
 ;; [A]nything-config && [A]nything---------------------------------------->>
 (require 'anything-config)
