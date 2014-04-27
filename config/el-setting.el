@@ -14,15 +14,16 @@
    bm
    dash-at-point
    grep-a-lot
+   highlight-indentation
    highlight-symbol
    highline
-   htmlize   
+   htmlize
    multi-web-mode
    magit
    inf-ruby
    smartparens
    sublime-themes
-   yasnippet dropdown-list ;; dropdown-list is needed by yasnippet   
+   yasnippet dropdown-list ;; dropdown-list is needed by yasnippet
    ))
 ;; [A]g------------------------------------------------------------------->>
 (setq ag-highlight-search t)
@@ -52,6 +53,18 @@
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
 (grep-a-lot-setup-keys)
+
+;; [H]ighlight-indentation------------------------------------------------>>
+(require 'highlight-indentation)
+
+(add-hook 'ruby-mode-hook
+          (lambda () (highlight-indentation-current-column-mode)))
+
+(add-hook 'emacs-lisp-mode-hook
+          (lambda () (highlight-indentation-current-column-mode)))
+
+(add-hook 'python-mode-hook
+          (lambda () (highlight-indentation-current-column-mode)))
 
 ;; [H]ighlight-symbol----------------------------------------------------->>
 (setq highlight-symbol-mode t)
@@ -100,7 +113,7 @@
 
 ;; [S]ublime-themes]------------------------------------------------------>>
 ;; (load-theme 'hickey t)
-(load-theme 'wheatgrass t)
+;; (load-theme 'wheatgrass t)
 
 ;; [Y]asnippet------------------------------------------------------------>>
 (require 'yasnippet)

@@ -73,7 +73,7 @@
 ;; can use el-get, package still exist as supplementary
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ("marmalade" . "http://marmalade-repo.org/packages/")
-			 ("melpa" . "http://melpa.milkbox.net/packages/")))  
+			 ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (package-initialize)
 
@@ -89,6 +89,13 @@
    ((string-match system-name "sh-rd-hfeng")
     ":pixelsize=14")
    (":pixelsize=14")))
+
+;; red some color
+(set-cursor-color "red")
+
+(setq default-frame-alist
+      '((cursor-color . "red")))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ==============Boolean Habits=================== ;;
@@ -121,3 +128,5 @@
 (setq backup-inhibited t)
 ;; disable auto save
 (setq auto-save-default nil)
+;; Enable copy and pasting from clipboard
+(setq x-select-enable-clipboard t)
