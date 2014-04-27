@@ -19,6 +19,7 @@
    multi-web-mode
    magit
    inf-ruby
+   smartparens
    sublime-themes
    yasnippet dropdown-list ;; dropdown-list is needed by yasnippet   
    ))
@@ -87,6 +88,14 @@
 ;;                 html-mode-hook))
 ;;   (add-hook hook (lambda () (rainbow-mode t))))
 
+;; [S]martparens---------------------------------------------------------->>
+(require 'smartparens-config)
+(require 'smartparens-ruby)
+(smartparens-global-mode)
+(show-smartparens-global-mode t)
+(sp-with-modes '(rhtml-mode)
+  (sp-local-pair "<" ">")
+  (sp-local-pair "<%" "%>"))
 
 ;; [S]ublime-themes]------------------------------------------------------>>
 ;; (load-theme 'hickey t)
