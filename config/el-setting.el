@@ -12,6 +12,7 @@
    anything-config
    auto-complete
    bm
+   dash-at-point
    grep-a-lot
    highlight-symbol
    highline
