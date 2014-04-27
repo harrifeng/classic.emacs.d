@@ -76,7 +76,7 @@
 ;; [H]ighline-mode-------------------------------------------------------->>
 (require 'highline)
 (highline-mode 1)
-(global-set-key [f11] 'highline-mode)
+(global-set-key [f8] 'highline-mode)
 
 ;; To customize the background color
 (set-face-background 'highline-face "#333")
