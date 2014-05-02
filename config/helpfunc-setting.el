@@ -84,7 +84,7 @@
   (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 
 ;;set transparent and use f4 to control it
-(setq alpha-list '((100 100) (95 65) (70 55)))
+(setq alpha-list '((100 100) (80 70) (60 40)))
 (defun loop-alpha ()
   (interactive)
   (let ((h (car alpha-list)))                ;; head value will set to
