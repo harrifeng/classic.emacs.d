@@ -83,7 +83,7 @@
    ((string-match system-name "hfeng-desktop")
     ":pixelsize=18")
    ((string-match system-name "hfengdeMacBook-Air.local")
-    ":pixelsize=15")
+    ":pixelsize=14")
    ((string-match system-name "hfeng-t60p")
     ":pixelsize=20")
    ((string-match system-name "sh-rd-hfeng")
