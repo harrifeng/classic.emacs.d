@@ -87,7 +87,7 @@
    ((string-match system-name "hfeng-t60p")
     ":pixelsize=20")
    ((string-match system-name "sh-rd-hfeng")
-    ":pixelsize=18")
+    ":pixelsize=16")
    (":pixelsize=16")))
 
 ;; red some color
