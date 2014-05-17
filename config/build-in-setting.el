@@ -92,8 +92,9 @@
                           (name . "^\\*Completions")
                           (name . "^\\*Compile-Log")
                           (name . "^\\*scratch\\*$")))
-               ("Ruby"   (mode . ruby-mode)
-                         (mode . enh-ruby-mode))
+               ("Ruby"   (or
+                          (mode . ruby-mode)
+                          (mode . enh-ruby-mode)))
                ("Magit"  (name . "^\\*magit"))
                ("Docs"   (mode . org-mode))
                ("Dired"  (mode . dired-mode))))))
