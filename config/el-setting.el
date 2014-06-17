@@ -20,7 +20,7 @@
    htmlize
    magit
    inf-ruby
-   restclient
+   restclient 
    smartparens
    sublime-themes
    web-mode
@@ -137,5 +137,5 @@
         yas/x-prompt
         yas/completing-prompt
         yas/no-prompt))
-(require 'request)
+(require 'restclient)
 (add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
