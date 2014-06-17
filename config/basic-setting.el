@@ -88,7 +88,7 @@
     ":pixelsize=20")
    ((string-match system-name "sh-rd-hfeng")
     ":pixelsize=16")
-   (":pixelsize=16")))
+   (":pixelsize=14")))
 
 ;; red some color
 (set-cursor-color "red")

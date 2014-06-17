@@ -67,3 +67,4 @@ nosetests.xml
 # recent file  #
 ################
 recentf
+request/
