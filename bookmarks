@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("openstack"
+(("parallel-ubuntu-ct"
+ (filename . "/ssh:hfeng@10.211.55.3:/home/hfeng/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "37 Jun 23 13:49 ")
+ (position . 190))
+("ct"
+ (filename . "/ssh:i819737@192.168.221.128:/home/i819737/")
+ (front-context-string . ".ICEauthority\n  ")
+ (rear-context-string . "60 Jun 22 19:34 ")
+ (position . 224))
+("openstack"
  (filename . "/ssh:hfeng@ubuntu:/home/hfeng/")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "64 Jan 14 05:05 ")

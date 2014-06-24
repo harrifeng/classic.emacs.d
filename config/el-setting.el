@@ -20,7 +20,7 @@
    htmlize
    magit
    inf-ruby
-   restclient 
+   restclient
    smartparens
    sublime-themes
    web-mode
@@ -125,10 +125,12 @@
 ;; [Y]asnippet------------------------------------------------------------>>
 (require 'yasnippet)
 (yas-global-mode 1)
+
 (setq yas-snippet-dirs
       '(
         (concat my-emacs-path "snippets")
         ))
+
 ;; [d]ropdown-------------------------------------------<<
 (require 'dropdown-list)
 (setq yas-prompt-functions
