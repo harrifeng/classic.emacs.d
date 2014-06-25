@@ -85,7 +85,7 @@
    ((string-match system-name "hfengdeMacBook-Air.local")
     ":pixelsize=14")
    ((string-match system-name "pvgm50860487a.dhcp.pvgl.sap.corp")
-    ":pixelsize=12")
+    ":pixelsize=13")
    (":pixelsize=14")))
 
 ;; red some color
