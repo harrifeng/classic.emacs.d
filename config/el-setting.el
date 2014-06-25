@@ -20,6 +20,7 @@
    htmlize
    magit
    inf-ruby
+   pastels-on-dark-theme
    restclient
    smartparens
    sublime-themes
@@ -97,6 +98,8 @@
 ;; (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
 ;; (multi-web-global-mode 1)
 
+;; [P]astels-on-dark------------------------------------------------------>>
+(load-theme 'pastels-on-dark t)
 ;; [R]ainbow-mode--------------------------------------------------------->>
 ;; (require 'rainbow-mode)
 ;; (dolist (hook '(css-mode-hook
@@ -104,8 +107,8 @@
 ;;   (add-hook hook (lambda () (rainbow-mode t))))
 
 ;; [S]martparens---------------------------------------------------------->>
-(smartparens-global-mode)
-(show-smartparens-global-mode t)
+;; (smartparens-global-mode)
+;; (show-smartparens-global-mode t)
 
 ;; [S]ublime-themes]------------------------------------------------------>>
 ;; (load-theme 'hickey t)
