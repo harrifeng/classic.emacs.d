@@ -12,7 +12,7 @@ url/
 .abbrev_defs
 tramp
 .#*
-#*
+\#*
 *.elc
 *~
 .emacs_custom.el

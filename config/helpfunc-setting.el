@@ -1,5 +1,16 @@
 (provide 'helpfunc-setting)
 
+(defun sap-proxy()
+  (interactive)
+  (setq url-proxy-services '(("http" . "proxy.sin.sap.corp:8080")
+                             ("https" . "proxy.sin.sap.corp:8080")))
+  )
+(defun no-proxy()
+  (interactive)
+  (setq url-proxy-services nil)
+  )
+
+
 (defun whack-whitespace (arg)
   "Delete all white space from point to the next word.  With prefix ARG
     delete across newlines as well.  The only danger in this is that you
