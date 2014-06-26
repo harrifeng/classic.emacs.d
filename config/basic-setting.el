@@ -94,6 +94,12 @@
 (setq default-frame-alist
       '((cursor-color . "red")))
 
+;; mysql config, not including password
+(setq sql-user "root")
+(setq sql-password "")
+(setq sql-database "mysql")
+(setq sql-server "localhost")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ==============Boolean Habits=================== ;;
