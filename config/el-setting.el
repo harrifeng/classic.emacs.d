@@ -22,6 +22,7 @@
    inf-ruby
    pastels-on-dark-theme
    restclient
+   rvm
    smartparens
    sublime-themes
    web-mode
