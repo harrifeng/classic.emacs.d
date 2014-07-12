@@ -2,13 +2,18 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ct-10.129.113-hfeng"
- (filename . "/ssh:hfeng@10.129.113.197:/home/hfeng/")
+(("ubuntu12-rvm"
+ (filename . "/ssh:hfeng@10.211.55.6:/home/hfeng/")
  (front-context-string . ".bash_history\n  ")
- (rear-context-string . "19 Jun 25 22:03 ")
- (position . 219))
-("ct-another"
- (filename . "/ssh:hfeng@10.129.113.197:/home/hfeng/")
+ (rear-context-string . "68 Jul  5 22:00 ")
+ (position . 190))
+("cubetree"
+ (filename . "/ssh:cubetree@integration2.sapjam.com:/home/cubetree/")
+ (front-context-string . ".Xauthority\n  dr")
+ (rear-context-string . "61 Feb 17 21:51 ")
+ (position . 249))
+("parallel-rvm-ubuntu"
+ (filename . "/ssh:hfeng@10.211.55.4:/home/hfeng/")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "65 Jun 25 19:43 ")
  (position . 219))
