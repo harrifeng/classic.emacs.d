@@ -14,6 +14,7 @@
    bm
    dash-at-point
    grep-a-lot
+   grizzl
    highlight-indentation
    highlight-symbol
    highline
@@ -112,7 +113,7 @@
 (setq projectile-file-exists-remote-cache-expire nil)
 
 ;; Completion
-;; (setq projectile-completion-system 'grizzl)
+(setq projectile-completion-system 'grizzl)
 
 ;; [R]ainbow-mode--------------------------------------------------------->>
 ;; (require 'rainbow-mode)
