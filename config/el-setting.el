@@ -21,6 +21,7 @@
    magit
    inf-ruby
    pastels-on-dark-theme
+   projectile
    restclient
    rvm
    smartparens
@@ -101,6 +102,18 @@
 
 ;; [P]astels-on-dark------------------------------------------------------>>
 (load-theme 'pastels-on-dark t)
+
+;; [P]rojectile----------------------------------------------------------->>
+(projectile-global-mode)
+;; to enable caching unconditionally
+(setq projectile-enable-caching t)
+
+;; To disable remote file exists cache that use this snippet of code:
+(setq projectile-file-exists-remote-cache-expire nil)
+
+;; Completion
+;; (setq projectile-completion-system 'grizzl)
+
 ;; [R]ainbow-mode--------------------------------------------------------->>
 ;; (require 'rainbow-mode)
 ;; (dolist (hook '(css-mode-hook

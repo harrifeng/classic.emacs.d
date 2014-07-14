@@ -68,3 +68,10 @@ nosetests.xml
 ################
 recentf
 request/
+
+
+##############
+# projectile #
+##############
+projectile.*
+projectile*.*
