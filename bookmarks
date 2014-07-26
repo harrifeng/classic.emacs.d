@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("SF-DO"
+(("resource_get"
+ (filename . "~/Code/git-jam/app/controllers/api/o_data/legacy_o_data_controller.rb")
+ (front-context-string . "  def resource_g")
+ (rear-context-string . "_content\n  end\n\n")
+ (position . 8340))
+("legacy_api:group.rb -- key to succ"
+ (filename . "~/Code/git-jam/app/api/o_data/legacy_api/entities/group.rb")
+ (front-context-string . "        def tou_")
+ (rear-context-string . "   end\n        \n")
+ (position . 18484))
+("SF-DO"
  (filename . "/ssh:hfeng@162.243.156.195:/home/hfeng/")
  (front-context-string . "..\n  -rw------- ")
  (rear-context-string . "96 Jun 22 05:07 ")
