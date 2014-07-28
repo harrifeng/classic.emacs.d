@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("resource_get"
+(("sg-do"
+ (filename . "/ssh:root@128.199.175.101:/etc/")
+ (front-context-string . "init.d\n  drwxr-x")
+ (rear-context-string . "96 Jul 23 11:43 ")
+ (position . 3734))
+("resource_get"
  (filename . "~/Code/git-jam/app/controllers/api/o_data/legacy_o_data_controller.rb")
  (front-context-string . "  def resource_g")
  (rear-context-string . "_content\n  end\n\n")
