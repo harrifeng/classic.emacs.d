@@ -19,10 +19,13 @@
 
 ;; tramp setting password keep time
 (setq password-cache-expiry 6000)
-;; usage is like this /sudo:root@host, then use theuser name `hfeng,
-;; Maybe, we can know how to configure to select the user
-(set-default 'tramp-default-proxies-alist
-             (quote ((".*" "\\`root\\'" "/ssh:hfeng@%h:"))))
+
+;; If you want to use sudo on remote host, following is the best ;;
+;; practice, no other configuration needed                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; C-x C-f /ssh:you@remotehost|sudo:remotehost:/path/to/file RET ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 ;; --------uniquify------------------->>
 (require 'uniquify)

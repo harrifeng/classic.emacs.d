@@ -159,3 +159,18 @@
         yas/no-prompt))
 (require 'restclient)
 (add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
+
+(require 'multi-term)
+(require 'git-gutter)
+(global-git-gutter-mode +1)
+
+(require 'dsvn)
+
+(autoload 'svn-status "dsvn" "Run `svn status'." t)
+(autoload 'svn-update "dsvn" "Run `svn update'." t)
+
+;; This file integrates well with vc-svn, so you might want to do this
+;; as well:
+
+(require 'vc-svn)
+

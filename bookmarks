@@ -2,44 +2,34 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("sg-do"
- (filename . "/ssh:root@128.199.175.101:/etc/")
+(("Ubuntu-ROOT-1204"
+ (filename . "/ssh:hfeng@10.211.55.7|sudo:root@10.211.55.7:/etc")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "34 Jul 30 12:34 ")
+ (position . 193))
+("mo-i309511"
+ (filename . "/ssh:i309511@mo-80db7e414.mo.sap.corp:/home/i309511/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "21 Aug  1 07:38 ")
+ (position . 222))
+("Ubuntu-1204"
+ (filename . "/ssh:hfeng@10.211.55.7:/home/hfeng/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "68 Jul 30 17:58 ")
+ (position . 190))
+("sg-do"
+ (filename . "/ssh:hfeng@128.199.207.44:/home/hfeng")
  (front-context-string . "init.d\n  drwxr-x")
  (rear-context-string . "96 Jul 23 11:43 ")
  (position . 3734))
-("resource_get"
- (filename . "~/Code/git-jam/app/controllers/api/o_data/legacy_o_data_controller.rb")
- (front-context-string . "  def resource_g")
- (rear-context-string . "_content\n  end\n\n")
- (position . 8340))
-("legacy_api:group.rb -- key to succ"
- (filename . "~/Code/git-jam/app/api/o_data/legacy_api/entities/group.rb")
- (front-context-string . "        def tou_")
- (rear-context-string . "   end\n        \n")
- (position . 18484))
-("SF-DO"
- (filename . "/ssh:hfeng@162.243.156.195:/home/hfeng/")
+("sg-ROOT-do"
+ (filename . "/ssh:hfeng@128.199.207.44|sudo:root@128.199.207.44:/etc")
  (front-context-string . "..\n  -rw------- ")
  (rear-context-string . "96 Jun 22 05:07 ")
  (position . 151))
-("ubuntu12-rvm"
- (filename . "/ssh:hfeng@10.211.55.6:/home/hfeng/")
+("mo-ROOT-i309511"
+ (filename . "/ssh:i309511@mo-80db7e414.mo.sap.corp|sudo:root@mo-80db7e414.mo.sap.corp:/etc")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "68 Jul  5 22:00 ")
- (position . 190))
-("cubetree"
- (filename . "/ssh:cubetree@integration2.sapjam.com:/home/cubetree/")
- (front-context-string . ".Xauthority\n  dr")
- (rear-context-string . "61 Feb 17 21:51 ")
- (position . 249))
-("parallel-rvm-ubuntu"
- (filename . "/ssh:hfeng@10.211.55.4:/home/hfeng/")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "65 Jun 25 19:43 ")
- (position . 219))
-("parallel-ubuntu-ct"
- (filename . "/ssh:hfeng@10.211.55.3:/home/hfeng/")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "37 Jun 23 13:49 ")
  (position . 190))
 )
