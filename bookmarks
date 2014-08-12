@@ -2,13 +2,18 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Ubuntu-ROOT-1204"
+(("sapjam@INT2"
+ (filename . "/ssh:cubetree@integration2.sapjam.com:/var/www/ct/stage/current/")
+ (front-context-string . ".CFUserTextEncod")
+ (rear-context-string . " 3 Jun 24 15:21 ")
+ (position . 274))
+("Ubuntu-ROOT-1204"
  (filename . "/ssh:hfeng@10.211.55.7|sudo:root@10.211.55.7:/etc")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "34 Jul 30 12:34 ")
  (position . 193))
 ("mo-i309511"
- (filename . "/ssh:i309511@mo-80db7e414.mo.sap.corp:/home/i309511/")
+ (filename . "/ssh:i309511@10.97.23.248:/home/i309511/")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "21 Aug  1 07:38 ")
  (position . 222))
@@ -28,7 +33,7 @@
  (rear-context-string . "96 Jun 22 05:07 ")
  (position . 151))
 ("mo-ROOT-i309511"
- (filename . "/ssh:i309511@mo-80db7e414.mo.sap.corp|sudo:root@mo-80db7e414.mo.sap.corp:/etc")
+ (filename . "/ssh:i309511@10.97.23.248|sudo:root@10.97.23.248:/etc")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "68 Jul  5 22:00 ")
  (position . 190))

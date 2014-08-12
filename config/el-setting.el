@@ -105,15 +105,18 @@
 (load-theme 'pastels-on-dark t)
 
 ;; [P]rojectile----------------------------------------------------------->>
-(projectile-global-mode)
+;; (projectile-global-mode)
+
+(global-set-key (kbd "M-p") 'helm-projectile)
+
 ;; to enable caching unconditionally
-(setq projectile-enable-caching t)
+;; (setq projectile-enable-caching t)
 
 ;; To disable remote file exists cache that use this snippet of code:
-(setq projectile-file-exists-remote-cache-expire nil)
+;; (setq projectile-file-exists-remote-cache-expire nil)
 
 ;; Completion
-(setq projectile-completion-system 'grizzl)
+;; (setq projectile-completion-system 'grizzl)
 
 ;; [R]ainbow-mode--------------------------------------------------------->>
 ;; (require 'rainbow-mode)
@@ -173,4 +176,9 @@
 ;; as well:
 
 (require 'vc-svn)
+
+(require 'scss-mode)
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
 
