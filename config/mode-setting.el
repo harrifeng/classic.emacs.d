@@ -30,3 +30,4 @@
 (add-hook 'ruby-mode-hook
           (lambda ()
             (electric-indent-mode t) ))
+(add-to-list 'auto-mode-alist '("\\Gemfile\\'" . ruby-mode))

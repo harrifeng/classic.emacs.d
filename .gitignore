@@ -75,3 +75,4 @@ request/
 ##############
 projectile.*
 projectile*.*
+.mc-lists.el
