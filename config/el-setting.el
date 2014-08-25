@@ -163,8 +163,9 @@
 (global-set-key (kbd "C-x C-r")      'helm-recentf)
 (global-set-key (kbd "C-x b")        'helm-mini)
 (global-set-key (kbd "M-p")          'helm-projectile)
+(global-set-key (kbd "C-M-;")          'helm-projectile)
 (global-set-key (kbd "M-y")          'helm-show-kill-ring)
-(global-set-key (kbd "M-x")          'helm-M-x)
+;; (global-set-key (kbd "M-x")          'helm-M-x)
 (global-set-key (kbd "C-c C-m")      'helm-M-x)
 (global-set-key (kbd "C-x C-m")      'helm-M-x)
 
