@@ -23,6 +23,7 @@
    htmlize
    magit
    multi-term
+   multiple-cursors
    inf-ruby
    pastels-on-dark-theme
    projectile
