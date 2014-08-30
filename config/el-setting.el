@@ -22,6 +22,7 @@
    highline
    htmlize
    magit
+   markdown-mode
    multi-term
    multiple-cursors
    inf-ruby
@@ -165,7 +166,7 @@
 (global-set-key (kbd "C-x b")        'helm-mini)
 (global-set-key (kbd "M-p")          'helm-projectile)
 (global-set-key (kbd "C-M-;")          'helm-projectile)
-(global-set-key (kbd "M-y")          'helm-show-kill-ring)
+;; (global-set-key (kbd "M-y")          'helm-show-kill-ring)
 ;; (global-set-key (kbd "M-x")          'helm-M-x)
 (global-set-key (kbd "C-c C-m")      'helm-M-x)
 (global-set-key (kbd "C-x C-m")      'helm-M-x)
@@ -175,3 +176,10 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
