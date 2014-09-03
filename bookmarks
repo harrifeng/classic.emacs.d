@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("t60p-ROOT-ubuntu1404"
+(("PVGL50865939A-i309511"
+ (filename . "/ssh:i309511@PVGL50865939A:/sapmnt/HOME/i309511/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "68 Sep  3 10:12 ")
+ (position . 209))
+("t60p-ROOT-ubuntu1404"
  (filename . "/sudo:root@192.168.32.128:/etc/")
  (front-context-string . ".pwd.lock\n  drwx")
  (rear-context-string . " 0 Apr 16 14:02 ")
