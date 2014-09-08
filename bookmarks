@@ -2,7 +2,32 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("sapjam@INT2"
+(("PVGL50865939A-i309511"
+ (filename . "/ssh:i309511@PVGL50865939A:/sapmnt/HOME/i309511/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "68 Sep  3 10:12 ")
+ (position . 209))
+("t60p-ROOT-ubuntu1404"
+ (filename . "/sudo:root@192.168.32.128:/etc/")
+ (front-context-string . ".pwd.lock\n  drwx")
+ (rear-context-string . " 0 Apr 16 14:02 ")
+ (position . 193))
+("t60p-ubuntu1404"
+ (filename . "/ssh:hfeng@192.168.32.128:/home/hfeng/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "60 Aug 23 22:44 ")
+ (position . 193))
+("ubuntu1404-ROOT"
+ (filename . "/sudo:root@10.211.55.7:/etc/")
+ (front-context-string . ".pwd.lock\n  drwx")
+ (rear-context-string . " 0 Apr 17 05:02 ")
+ (position . 190))
+("ubuntu-1404"
+ (filename . "/ssh:hfeng@10.211.55.8:/home/hfeng/")
+ (front-context-string . ".bash_history\n  ")
+ (rear-context-string . "51 Aug 14 06:05 ")
+ (position . 190))
+("sapjam@INT2"
  (filename . "/ssh:cubetree@integration2.sapjam.com:/var/www/ct/stage/current/")
  (front-context-string . ".CFUserTextEncod")
  (rear-context-string . " 3 Jun 24 15:21 ")
