@@ -48,7 +48,7 @@
  (rear-context-string . "34 Jul 30 12:34 ")
  (position . 193))
 ("mo-i309511"
- (filename . "/ssh:i309511@10.97.23.248:/home/i309511/")
+ (filename . "/ssh:i309511@10.97.64.141:/home/i309511/")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "21 Aug  1 07:38 ")
  (position . 222))
@@ -68,7 +68,7 @@
  (rear-context-string . "96 Jun 22 05:07 ")
  (position . 151))
 ("mo-ROOT-i309511"
- (filename . "/ssh:i309511@10.97.23.248|sudo:root@10.97.23.248:/etc")
+ (filename . "/ssh:i309511@10.97.64.141|sudo:root@10.97.64.141:/etc")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "68 Jul  5 22:00 ")
  (position . 190))
