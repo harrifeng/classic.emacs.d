@@ -21,17 +21,21 @@
   (let ((regexp (if arg "[ \t\n]+" "[ \t]+")))
     (re-search-forward regexp nil t)
     (replace-match "" nil nil)))
-;; (global-set-key (kbd "C-i")      'whack-whitespace)
+
+;; Translate the problematic keys to the function key Hyper,
+;; then bind this to the desired ctrl-i behavior
+(keyboard-translate ?\C-i ?\H-i)
+(global-set-key [?\H-i] 'whack-whitespace)
 
 (defun shell-mode-auto-rename-buffer (text)
   (if (eq major-mode 'shell-mode)
       (rename-buffer  (concat "*Shell: "
-			      (concat default-directory "*")) t)))
+                  (concat default-directory "*")) t)))
 
 (defun my-shell-mode-hook ()
   (local-set-key (kbd "C-x C-l")
-		 (lambda nil (interactive) (erase-buffer)
-		   (comint-send-input)))
+         (lambda nil (interactive) (erase-buffer)
+           (comint-send-input)))
   )
 
 ;;eshell clear the screen
@@ -48,9 +52,9 @@
   (interactive "*P")
   (comment-normalize-vars)
   (if (and (not (region-active-p))
-	   (not (looking-at "[ \t]*$")))
+       (not (looking-at "[ \t]*$")))
       (comment-or-uncomment-region (line-beginning-position)
-				   (line-end-position))
+                   (line-end-position))
     (comment-dwim arg)))
 
 
@@ -61,7 +65,7 @@
   "When called interactively with no active region,
    copy a single line instead."
   (interactive (if mark-active (list (region-beginning)
-				     (region-end))
+                     (region-end))
                  (message "Copied line")
                  (list (line-beginning-position)
                        (line-beginning-position 2)))))
@@ -157,14 +161,14 @@
 
 ;; run mulitiple eshell
 (add-hook 'eshell-mode-hook
-	  (lambda ()
-	    (rename-buffer (concat "*EShell: "
-				   (concat default-directory "*")) t)))
+      (lambda ()
+        (rename-buffer (concat "*EShell: "
+                   (concat default-directory "*")) t)))
 
 (add-hook 'eshell-directory-change-hook
-	  (lambda ()
-	    (rename-buffer (concat "*EShell: "
-				   (concat default-directory "*")) t)))
+      (lambda ()
+        (rename-buffer (concat "*EShell: "
+                   (concat default-directory "*")) t)))
 
 
 ;;clean all the buffer content
@@ -187,7 +191,7 @@
    (concat
     (abbreviate-file-name (eshell/pwd))
     (if (= (user-uid) 0)
-	" # " " >>> ")))
+    " # " " >>> ")))
  )
 
 ;; eshell time spent
@@ -197,5 +201,5 @@
           (lambda()(setq last-command-start-time (time-to-seconds))))
 (add-hook 'eshell-before-prompt-hook
           (lambda()
-	    (message "spend %g seconds"
-		     (- (time-to-seconds) last-command-start-time))))
+        (message "spend %g seconds"
+             (- (time-to-seconds) last-command-start-time))))
