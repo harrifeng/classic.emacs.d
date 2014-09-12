@@ -10,6 +10,7 @@
    ag
    auto-complete
    bm
+   column-marker
    dash-at-point
    dsvn
    grep-a-lot
@@ -33,7 +34,7 @@
    scss-mode
    sublime-themes
    web-mode
-   yasnippet dropdown-list ;; dropdown-list is needed by yasnippet
+   yasnippet dropdown-list
    ))
 ;; [A]g------------------------------------------------------------------->>
 (setq ag-highlight-search t)
@@ -46,9 +47,22 @@
 (require 'bm)
 (global-set-key (kbd "C-x m")        'bm-toggle)
 
+;; [D]svn----------------------------------------------------------------->>
+(require 'dsvn)
+
+(autoload 'svn-status "dsvn" "Run `svn status'." t)
+(autoload 'svn-update "dsvn" "Run `svn update'." t)
+;; This file integrates well with vc-svn, so you might want to do this
+;; as well:
+(require 'vc-svn)
+
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
 (grep-a-lot-setup-keys)
+
+;; [G]it-gutter----------------------------------------------------------->>
+(require 'git-gutter)
+(global-git-gutter-mode +1)
 
 ;; [H]ighlight-indentation------------------------------------------------>>
 (require 'highlight-indentation)
@@ -83,12 +97,15 @@
 ;; [M]agit---------------------------------------------------------------->>
 ;; Nothing to config now
 
+;; [M]ulti-term----------------------------------------------------------->>
+(require 'multi-term)
+
+
 ;; [P]astels-on-dark------------------------------------------------------>>
 (load-theme 'pastels-on-dark t)
 
 ;; [P]rojectile----------------------------------------------------------->>
 ;; (projectile-global-mode)
-
 
 ;; to enable caching unconditionally
 ;; (setq projectile-enable-caching t)
@@ -96,14 +113,9 @@
 ;; To disable remote file exists cache that use this snippet of code:
 ;; (setq projectile-file-exists-remote-cache-expire nil)
 
-;; Completion
-;; (setq projectile-completion-system 'grizzl)
-
-;; [R]ainbow-mode--------------------------------------------------------->>
-;; (require 'rainbow-mode)
-;; (dolist (hook '(css-mode-hook
-;;                 html-mode-hook))
-;;   (add-hook hook (lambda () (rainbow-mode t))))
+;; [R]estclient]---------------------------------------------------------->>
+(require 'restclient)
+(add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
 
 ;; [S]ublime-themes]------------------------------------------------------>>
 ;; (load-theme 'hickey t)
@@ -128,8 +140,7 @@
       '(
         (concat my-emacs-path "snippets")
         ))
-
-;; [d]ropdown-------------------------------------------<<
+;; dropdown-list is needed by yasnippet
 (require 'dropdown-list)
 (setq yas-prompt-functions
       '(yas/dropdown-prompt
@@ -137,22 +148,7 @@
         yas/x-prompt
         yas/completing-prompt
         yas/no-prompt))
-(require 'restclient)
-(add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
 
-(require 'multi-term)
-(require 'git-gutter)
-(global-git-gutter-mode +1)
-
-(require 'dsvn)
-
-(autoload 'svn-status "dsvn" "Run `svn status'." t)
-(autoload 'svn-update "dsvn" "Run `svn update'." t)
-
-;; This file integrates well with vc-svn, so you might want to do this
-;; as well:
-
-(require 'vc-svn)
 
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode")
@@ -160,14 +156,12 @@
 
 
 (require 'helm)
-
 (global-set-key (kbd "C-;")          'helm-toggle-visible-mark)
 (global-set-key (kbd "C-x C-r")      'helm-recentf)
 (global-set-key (kbd "C-x b")        'helm-mini)
 (global-set-key (kbd "M-p")          'helm-projectile)
-(global-set-key (kbd "C-M-;")          'helm-projectile)
-;; (global-set-key (kbd "M-y")          'helm-show-kill-ring)
-;; (global-set-key (kbd "M-x")          'helm-M-x)
+(global-set-key (kbd "C-M-;")        'helm-projectile)
+(global-set-key (kbd "C-M-y")        'helm-show-kill-ring)
 (global-set-key (kbd "C-c C-m")      'helm-M-x)
 (global-set-key (kbd "C-x C-m")      'helm-M-x)
 
@@ -184,7 +178,7 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-
+;; From now on, we use Ctrl + ; to expand the yasnippet
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "C-;") 'yas-expand)

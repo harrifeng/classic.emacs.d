@@ -21,7 +21,7 @@
   (let ((regexp (if arg "[ \t\n]+" "[ \t]+")))
     (re-search-forward regexp nil t)
     (replace-match "" nil nil)))
-(global-set-key (kbd "C-i")      'whack-whitespace)
+;; (global-set-key (kbd "C-i")      'whack-whitespace)
 
 (defun shell-mode-auto-rename-buffer (text)
   (if (eq major-mode 'shell-mode)
