@@ -22,6 +22,9 @@
 (defconst my-tool-path
   (concat my-dev "Tools/"))
 
+(defconst my-java-home
+  (concat my-dev "Java/"))
+
 (defconst my-java-path
   (concat my-dev "Java/bin/"))
 
@@ -30,6 +33,9 @@
 
 (defconst my-ant-path
   (concat my-java-util-path "ant/bin"))
+
+(defconst my-maven-path
+  (concat my-java-util-path "maven/bin"))
 
 (defconst my-graphviz-path
   (concat my-dev "Graphviz/bin/"))
@@ -43,7 +49,11 @@
          my-python-script-path ";"
          my-java-path ";"
          my-ant-path ";"
+         my-maven-path ";"         
          my-mingw-path ";"
          my-graphviz-path ";"
          my-util-path ";"
          (getenv "PATH")))
+
+(setenv "JAVA_HOME"
+        my-java-home)
