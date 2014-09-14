@@ -203,3 +203,16 @@
           (lambda()
         (message "spend %g seconds"
              (- (time-to-seconds) last-command-start-time))))
+
+;; chinese-gbk shell
+(defun gshell()
+  (interactive)
+  (let ((coding-system-for-read 'chinese-gbk)
+	(coding-system-for-write 'chinese-gbk))
+    (call-interactively (shell))))
+;; utf-8-unix shell
+(defun ushell()
+  (interactive)
+  (let ((coding-system-for-read 'utf-8-unix)
+	(coding-system-for-write 'utf-8-unix))
+    (call-interactively (shell))))
