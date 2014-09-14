@@ -2,7 +2,7 @@
 
 (global-set-key (kbd "C-c C-u")      'cua-mode)
 (global-set-key (kbd "C-c C-a")      'mark-whole-buffer)
-(global-set-key (kbd "C-x C-a")      'mark-whole-buffer)
+(global-set-key (kbd "<C-return>")   'mark-whole-buffer)
 (global-set-key (kbd "C-x C-k")      'kill-region)
 (global-set-key (kbd "C-x C-y")      'kill-ring-save)
 (global-set-key (kbd "C-x C-u")      'backward-kill-line)
