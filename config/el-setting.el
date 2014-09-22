@@ -95,7 +95,7 @@
 ;; ruby shell mode
 
 ;; [M]agit---------------------------------------------------------------->>
-;; Nothing to config now
+(global-set-key (kbd "C-M-i")        'magit-status)
 
 ;; [M]ulti-term----------------------------------------------------------->>
 (require 'multi-term)
