@@ -30,12 +30,12 @@
 (defun shell-mode-auto-rename-buffer (text)
   (if (eq major-mode 'shell-mode)
       (rename-buffer  (concat "*Shell: "
-                  (concat default-directory "*")) t)))
+                              (concat default-directory "*")) t)))
 
 (defun my-shell-mode-hook ()
   (local-set-key (kbd "C-x C-l")
-         (lambda nil (interactive) (erase-buffer)
-           (comint-send-input)))
+                 (lambda nil (interactive) (erase-buffer)
+                   (comint-send-input)))
   )
 
 ;;eshell clear the screen
@@ -52,9 +52,9 @@
   (interactive "*P")
   (comment-normalize-vars)
   (if (and (not (region-active-p))
-       (not (looking-at "[ \t]*$")))
+           (not (looking-at "[ \t]*$")))
       (comment-or-uncomment-region (line-beginning-position)
-                   (line-end-position))
+                                   (line-end-position))
     (comment-dwim arg)))
 
 
@@ -65,7 +65,7 @@
   "When called interactively with no active region,
    copy a single line instead."
   (interactive (if mark-active (list (region-beginning)
-                     (region-end))
+                                     (region-end))
                  (message "Copied line")
                  (list (line-beginning-position)
                        (line-beginning-position 2)))))
@@ -161,14 +161,14 @@
 
 ;; run mulitiple eshell
 (add-hook 'eshell-mode-hook
-      (lambda ()
-        (rename-buffer (concat "*EShell: "
-                   (concat default-directory "*")) t)))
+          (lambda ()
+            (rename-buffer (concat "*EShell: "
+                                   (concat default-directory "*")) t)))
 
 (add-hook 'eshell-directory-change-hook
-      (lambda ()
-        (rename-buffer (concat "*EShell: "
-                   (concat default-directory "*")) t)))
+          (lambda ()
+            (rename-buffer (concat "*EShell: "
+                                   (concat default-directory "*")) t)))
 
 
 ;;clean all the buffer content
@@ -191,7 +191,7 @@
    (concat
     (abbreviate-file-name (eshell/pwd))
     (if (= (user-uid) 0)
-    " # " " >>> ")))
+        " # " " >>> ")))
  )
 
 ;; eshell time spent
@@ -201,18 +201,108 @@
           (lambda()(setq last-command-start-time (time-to-seconds))))
 (add-hook 'eshell-before-prompt-hook
           (lambda()
-        (message "spend %g seconds"
-             (- (time-to-seconds) last-command-start-time))))
+            (message "spend %g seconds"
+                     (- (time-to-seconds) last-command-start-time))))
 
 ;; chinese-gbk shell
 (defun gshell()
   (interactive)
   (let ((coding-system-for-read 'chinese-gbk)
-	(coding-system-for-write 'chinese-gbk))
+        (coding-system-for-write 'chinese-gbk))
     (call-interactively (shell))))
 ;; utf-8-unix shell
 (defun ushell()
   (interactive)
   (let ((coding-system-for-read 'utf-8-unix)
-	(coding-system-for-write 'utf-8-unix))
+        (coding-system-for-write 'utf-8-unix))
     (call-interactively (shell))))
+
+;;needed in insert-word-or-file-name
+(defun backward-to-non-blank () "go to 1st non blank (after blank) to left"
+  (interactive)
+  (if (re-search-backward "[ \t\n][^ \t\n]" (point-min) t)
+      (forward-char 1)
+    (if (string-match "[^ \t\n]" (buffer-substring 1 2))
+        (goto-char (point-min)))))
+
+
+;;needed in insert-buffer/file/dir-name functions
+(defun buffer-name-not-mini ()
+  "Return the name of current buffer, as a string.
+If current buffer is the *mini-buffer* return name of previous-window."
+  (buffer-name (if (window-minibuffer-p)
+                   (if (eq (get-lru-window) (next-window))
+                       (window-buffer (previous-window))
+                     (window-buffer (next-window)))
+                 nil)))
+
+(defun insert-word-or-file-name ()
+  "copy word cursor is on or file name to minibuff input"
+  (interactive)
+  (let* ((bfl (current-buffer))
+         (str ""))
+    (set-buffer (buffer-name-not-mini))
+    (cond
+     ((eq major-mode 'dired-mode)
+      (setq str (dired-get-filename t t)))
+     (t
+      (let (bch ech)
+        (forward-char 1)
+        (backward-to-non-blank)
+        (setq bch (point))
+        (re-search-forward "[^ \t\n][ \t\n]" (point-max) t)
+        (setq ech (1- (point)))
+        (setq str (buffer-substring bch ech)))))
+    (set-buffer bfl)
+    (insert str)))
+
+;; Insert buffer name
+(defun ifn ()
+  "insert buffer name of current buffer or most recent buffer when in
+minibuffer"
+  (interactive)
+  (insert (buffer-file-name)))
+
+(defun insert-full-name ()
+  "insert buffer name of current buffer or most recent buffer when in
+minibuffer"
+  (interactive)
+  (insert (buffer-file-name)))
+
+(defun insert-buffer-name ()
+  "insert buffer name of current buffer or most recent buffer when in
+minibuffer"
+  (interactive)
+  (insert (buffer-name-not-mini)))
+
+
+(defun insert-buffer-dir-name ()
+  "insert dir name of current buffer or most recent buffer when in minibuffer"
+  (interactive)
+  (let* ((bfn (buffer-file-name (get-buffer (buffer-name-not-mini)))))
+    (if bfn
+        (insert (file-name-directory bfn)))))
+
+
+(defun insert-buffer-file-name ()
+  "insert file name of current buffer or most recent buffer when in minibuffer"
+  (interactive)
+  (let* ((bfn (buffer-file-name (get-buffer (buffer-name-not-mini)))))
+    (if bfn
+        (insert (file-name-nondirectory bfn)))))
+
+
+(defun complete-from-minibuffer-history ()
+  "Take the history list and make it available as a `completions' buffer"
+  (interactive)
+  (with-output-to-temp-buffer "*Completions*"
+    (display-completion-list (symbol-value minibuffer-history-variable))
+    (save-excursion
+      (set-buffer standard-output)
+      (setq completion-base-size 0))))
+
+
+(defun insert-current-date-time-minibuf ()
+  "insert the current date and time into mini-buffer."
+  (interactive)
+  (insert (format-time-string "%y%m%d_%H%M%S" (current-time))))
