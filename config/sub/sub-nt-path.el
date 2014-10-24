@@ -1,12 +1,12 @@
 (provide 'sub-nt-path)
 
-(defconst my-dev "d:/DevBox/")
+(defconst my-dev "c:/DevBox/")
 
 (defconst my-util-path
   (concat my-dev "Util/"))
 
 (defconst my-ruby-path
-  (concat my-dev "Ruby/bin/"))
+  (concat my-dev "Ruby200/bin/"))
 
 (defconst my-python-path
   (concat my-dev "Python/App/"))

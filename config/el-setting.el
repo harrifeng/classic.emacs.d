@@ -102,7 +102,13 @@
 
 
 ;; [P]astels-on-dark------------------------------------------------------>>
-(load-theme 'pastels-on-dark t)
+(defconst my-theme-load
+  (cond
+   ((string-match system-name "hfeng-thinkpad")
+    'whiteboard)
+   ('pastels-on-dark)))
+ 
+(load-theme my-theme-load t)
 
 ;; [P]rojectile----------------------------------------------------------->>
 ;; (projectile-global-mode)
