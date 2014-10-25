@@ -32,10 +32,12 @@
    restclient
    rvm
    scss-mode
+   smart-mode-line
    sublime-themes
    web-mode
    yasnippet dropdown-list
    ))
+
 ;; [A]g------------------------------------------------------------------->>
 (setq ag-highlight-search t)
 
@@ -116,6 +118,11 @@
 ;; [R]estclient]---------------------------------------------------------->>
 (require 'restclient)
 (add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
+
+;; [S]mart-mode-line------------------------------------------------------>>
+(require 'smart-mode-line)
+(sml/setup)
+(sml/apply-theme 'powerline)
 
 ;; [S]ublime-themes]------------------------------------------------------>>
 ;; (load-theme 'hickey t)

@@ -13,7 +13,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'build-in-setting)
 (require 'mode-setting)
-(require 'modeline-setting)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; el-get is used by mac and linux,package is used by all.  ;;
