@@ -104,7 +104,9 @@
 
 
 ;; [P]astels-on-dark------------------------------------------------------>>
-(load-theme 'pastels-on-dark t)
+(if (string-match system-name "hfeng-thinkpad")
+    ()
+  (load-theme 'pastels-on-dark-theme t))
 
 ;; [P]rojectile----------------------------------------------------------->>
 ;; (projectile-global-mode)
