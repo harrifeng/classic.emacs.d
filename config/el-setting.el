@@ -27,7 +27,6 @@
    multi-term
    multiple-cursors
    inf-ruby
-   pastels-on-dark-theme
    projectile
    restclient
    rvm
@@ -104,9 +103,6 @@
 
 
 ;; [P]astels-on-dark------------------------------------------------------>>
-(if (string-match system-name "hfeng-thinkpad")
-    ()
-  (load-theme 'pastels-on-dark-theme t))
 
 ;; [P]rojectile----------------------------------------------------------->>
 ;; (projectile-global-mode)
