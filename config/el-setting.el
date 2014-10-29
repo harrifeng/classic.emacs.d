@@ -32,6 +32,7 @@
    rvm
    scss-mode
    smart-mode-line
+   solarized-theme
    sublime-themes
    web-mode
    yasnippet dropdown-list
@@ -101,9 +102,6 @@
 ;; [M]ulti-term----------------------------------------------------------->>
 (require 'multi-term)
 
-
-;; [P]astels-on-dark------------------------------------------------------>>
-
 ;; [P]rojectile----------------------------------------------------------->>
 ;; (projectile-global-mode)
 
@@ -121,9 +119,12 @@
 (require 'smart-mode-line)
 (setq sml/no-confirm-load-theme t)
 (sml/setup)
-(sml/apply-theme 'powerline)
+(sml/apply-theme 'dark)
+;; (sml/apply-theme 'powerline)
 
-;; [S]ublime-themes]------------------------------------------------------>>
+;; [S]olarized-thems------------------------------------------------------>>
+(load-theme 'solarized-dark t)
+;; [S]ublime-themes------------------------------------------------------->>
 ;; (load-theme 'hickey t)
 ;; (load-theme 'wheatgrass t)
 
