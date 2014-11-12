@@ -12,7 +12,6 @@
    bm
    column-marker
    dash-at-point
-   dsvn
    grep-a-lot
    git-gutter
    helm
@@ -31,7 +30,7 @@
    restclient
    rvm
    scss-mode
-   smart-mode-line
+   smart-mode-line-powerline-theme
    solarized-theme
    sublime-themes
    web-mode
@@ -48,15 +47,6 @@
 ;; [B]m-toogle------------------------------------------------------------>>
 (require 'bm)
 (global-set-key (kbd "C-x m")        'bm-toggle)
-
-;; [D]svn----------------------------------------------------------------->>
-(require 'dsvn)
-
-(autoload 'svn-status "dsvn" "Run `svn status'." t)
-(autoload 'svn-update "dsvn" "Run `svn update'." t)
-;; This file integrates well with vc-svn, so you might want to do this
-;; as well:
-(require 'vc-svn)
 
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
@@ -115,7 +105,7 @@
 (require 'restclient)
 (add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
 
-;; [S]mart-mode-line------------------------------------------------------>>
+;; [S]mart-mode-line-powerline-theme-------------------------------------->>
 (require 'smart-mode-line)
 (setq sml/no-confirm-load-theme t)
 (sml/setup)

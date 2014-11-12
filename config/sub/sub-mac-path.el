@@ -4,6 +4,7 @@
 ;; > brew install emacs --cocoa --srge
 (setenv "PATH"
 	(concat
+     (concat (getenv "HOME") "/.rbenv/shims") ":"
 	 "/usr/local/bin" ":"
 	 "/bin"           ":"
 	 "/sbin"          ":"
