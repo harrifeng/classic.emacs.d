@@ -56,6 +56,20 @@
 (require 'git-gutter)
 (global-git-gutter-mode +1)
 
+;; [H]elm-alike-plugins--------------------------------------------------->>
+(require 'helm)
+(global-set-key (kbd "C-;")          'helm-toggle-visible-mark)
+(global-set-key (kbd "C-x C-r")      'helm-recentf)
+(global-set-key (kbd "C-x b")        'helm-mini)
+(global-set-key (kbd "C-M-;")        'helm-projectile)
+(global-set-key (kbd "C-M-y")        'helm-show-kill-ring)
+(global-set-key (kbd "C-c C-m")      'helm-M-x)
+(global-set-key (kbd "C-x C-m")      'helm-M-x)
+
+;; Only works for helm-ag, not for helm-do-ag
+(setq helm-ag-command-option "--all-text")
+(setq helm-ag-source-type 'file-line)
+
 ;; [H]ighlight-indentation------------------------------------------------>>
 (require 'highlight-indentation)
 
@@ -152,15 +166,6 @@
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 
-(require 'helm)
-(global-set-key (kbd "C-;")          'helm-toggle-visible-mark)
-(global-set-key (kbd "C-x C-r")      'helm-recentf)
-(global-set-key (kbd "C-x b")        'helm-mini)
-(global-set-key (kbd "M-p")          'helm-projectile)
-(global-set-key (kbd "C-M-;")        'helm-projectile)
-(global-set-key (kbd "C-M-y")        'helm-show-kill-ring)
-(global-set-key (kbd "C-c C-m")      'helm-M-x)
-(global-set-key (kbd "C-x C-m")      'helm-M-x)
 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
