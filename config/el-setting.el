@@ -35,6 +35,7 @@
    sublime-themes
    web-mode
    yasnippet dropdown-list
+   zen-and-art-theme
    ))
 
 ;; [A]g------------------------------------------------------------------->>
@@ -127,7 +128,7 @@
 ;; (sml/apply-theme 'powerline)
 
 ;; [S]olarized-thems------------------------------------------------------>>
-(load-theme 'solarized-dark t)
+;; (load-theme 'solarized-dark t)
 ;; [S]ublime-themes------------------------------------------------------->>
 ;; (load-theme 'hickey t)
 ;; (load-theme 'wheatgrass t)
@@ -159,7 +160,8 @@
         yas/x-prompt
         yas/completing-prompt
         yas/no-prompt))
-
+;; [Z]en-and-art-theme---------------------------------------------------->>
+(load-theme 'zen-and-art t)
 
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode")
