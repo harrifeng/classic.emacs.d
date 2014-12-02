@@ -56,7 +56,7 @@
   (require 'sub-linux-path)
   (require 'sub-linux-mode)
   (require 'sub-linux-font)
-  (menu-bar-mode t))
+  (menu-bar-mode -1))
 
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; Cygwin System specific test on 1.7.1        ;;
