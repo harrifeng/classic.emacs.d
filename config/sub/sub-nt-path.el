@@ -1,6 +1,8 @@
 (provide 'sub-nt-path)
 
-(defconst my-dev "c:/DevBox/")
+(if (file-exists-p "c:/Devbox/")
+    (defconst my-dev "c:/Devbox/")
+  (defconst my-dev "d:/Devbox/"))
 
 (defconst my-util-path
   (concat my-dev "Util/"))

@@ -77,3 +77,8 @@ projectile.*
 projectile*.*
 .mc-lists.el
 /srecode-map.el
+
+############
+# session  #
+############
+session.*

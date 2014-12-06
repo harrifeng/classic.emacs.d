@@ -12,7 +12,6 @@
    bm
    column-marker
    dash-at-point
-   dsvn
    grep-a-lot
    git-gutter
    helm
@@ -27,15 +26,18 @@
    multi-term
    multiple-cursors
    inf-ruby
-   pastels-on-dark-theme
    projectile
    restclient
    rvm
    scss-mode
+   smart-mode-line-powerline-theme
+   solarized-theme
    sublime-themes
    web-mode
    yasnippet dropdown-list
+   zen-and-art-theme
    ))
+
 ;; [A]g------------------------------------------------------------------->>
 (setq ag-highlight-search t)
 
@@ -47,15 +49,6 @@
 (require 'bm)
 (global-set-key (kbd "C-x m")        'bm-toggle)
 
-;; [D]svn----------------------------------------------------------------->>
-(require 'dsvn)
-
-(autoload 'svn-status "dsvn" "Run `svn status'." t)
-(autoload 'svn-update "dsvn" "Run `svn update'." t)
-;; This file integrates well with vc-svn, so you might want to do this
-;; as well:
-(require 'vc-svn)
-
 ;; [G]rep-a-lot----------------------------------------------------------->>
 (require 'grep-a-lot)
 (grep-a-lot-setup-keys)
@@ -63,6 +56,20 @@
 ;; [G]it-gutter----------------------------------------------------------->>
 (require 'git-gutter)
 (global-git-gutter-mode +1)
+
+;; [H]elm-alike-plugins--------------------------------------------------->>
+(require 'helm)
+(global-set-key (kbd "C-;")          'helm-toggle-visible-mark)
+(global-set-key (kbd "C-x C-r")      'helm-recentf)
+(global-set-key (kbd "C-x b")        'helm-mini)
+(global-set-key (kbd "C-M-;")        'helm-projectile)
+(global-set-key (kbd "C-M-y")        'helm-show-kill-ring)
+(global-set-key (kbd "C-c C-m")      'helm-M-x)
+(global-set-key (kbd "C-x C-m")      'helm-M-x)
+
+;; Only works for helm-ag, not for helm-do-ag
+(setq helm-ag-command-option "--all-text")
+(setq helm-ag-source-type 'file-line)
 
 ;; [H]ighlight-indentation------------------------------------------------>>
 (require 'highlight-indentation)
@@ -100,16 +107,6 @@
 ;; [M]ulti-term----------------------------------------------------------->>
 (require 'multi-term)
 
-
-;; [P]astels-on-dark------------------------------------------------------>>
-(defconst my-theme-load
-  (cond
-   ((string-match system-name "hfeng-thinkpad")
-    'whiteboard)
-   ('pastels-on-dark)))
- 
-(load-theme my-theme-load t)
-
 ;; [P]rojectile----------------------------------------------------------->>
 ;; (projectile-global-mode)
 
@@ -123,7 +120,16 @@
 (require 'restclient)
 (add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
 
-;; [S]ublime-themes]------------------------------------------------------>>
+;; [S]mart-mode-line-powerline-theme-------------------------------------->>
+(require 'smart-mode-line)
+(setq sml/no-confirm-load-theme t)
+(sml/setup)
+(sml/apply-theme 'dark)
+;; (sml/apply-theme 'powerline)
+
+;; [S]olarized-thems------------------------------------------------------>>
+;; (load-theme 'solarized-dark t)
+;; [S]ublime-themes------------------------------------------------------->>
 ;; (load-theme 'hickey t)
 ;; (load-theme 'wheatgrass t)
 
@@ -154,22 +160,14 @@
         yas/x-prompt
         yas/completing-prompt
         yas/no-prompt))
-
+;; [Z]en-and-art-theme---------------------------------------------------->>
+(load-theme 'zen-and-art t)
 
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 
-(require 'helm)
-(global-set-key (kbd "C-;")          'helm-toggle-visible-mark)
-(global-set-key (kbd "C-x C-r")      'helm-recentf)
-(global-set-key (kbd "C-x b")        'helm-mini)
-(global-set-key (kbd "M-p")          'helm-projectile)
-(global-set-key (kbd "C-M-;")        'helm-projectile)
-(global-set-key (kbd "C-M-y")        'helm-show-kill-ring)
-(global-set-key (kbd "C-c C-m")      'helm-M-x)
-(global-set-key (kbd "C-x C-m")      'helm-M-x)
 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)

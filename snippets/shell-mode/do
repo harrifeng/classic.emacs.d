@@ -1,4 +1,4 @@
 # contributor: Harri Feng <harrifeng@gmail.com>
-# name :
+# name: docker start a instance
 # --
-rvm use 1.9.3@rails3020
+sudo docker
