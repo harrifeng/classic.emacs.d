@@ -59,6 +59,9 @@
 
 ;; [H]elm-alike-plugins--------------------------------------------------->>
 (require 'helm)
+(require 'helm-projectile)
+(helm-projectile-on)
+
 (global-set-key (kbd "C-;")          'helm-toggle-visible-mark)
 (global-set-key (kbd "C-x C-r")      'helm-recentf)
 (global-set-key (kbd "C-x b")        'helm-mini)
@@ -108,7 +111,7 @@
 (require 'multi-term)
 
 ;; [P]rojectile----------------------------------------------------------->>
-;; (projectile-global-mode)
+(projectile-global-mode)
 
 ;; to enable caching unconditionally
 ;; (setq projectile-enable-caching t)
