@@ -11,7 +11,7 @@
   (concat my-dev "Ruby200/bin/"))
 
 (defconst my-python-path
-  (concat my-dev "Python/App/"))
+  (concat my-dev "Python266/App/"))
 (defconst my-python-script-path
   (concat my-python-path "Scripts/"))
 
