@@ -13,6 +13,7 @@
    column-marker
    dash-at-point
    grep-a-lot
+   groovy-mode
    git-gutter
    helm
    helm-ag

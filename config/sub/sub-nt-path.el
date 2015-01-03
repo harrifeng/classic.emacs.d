@@ -39,6 +39,9 @@
 (defconst my-maven-path
   (concat my-java-util-path "maven/bin"))
 
+(defconst my-gradle-path
+  (concat my-java-util-path "gradle/bin"))
+
 (defconst my-graphviz-path
   (concat my-dev "Graphviz/bin/"))
 
@@ -51,7 +54,8 @@
          my-python-script-path ";"
          my-java-path ";"
          my-ant-path ";"
-         my-maven-path ";"         
+         my-maven-path ";"
+         my-gradle-path ";"
          my-mingw-path ";"
          my-graphviz-path ";"
          my-util-path ";"
