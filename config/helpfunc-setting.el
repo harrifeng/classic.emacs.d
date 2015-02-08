@@ -5,6 +5,12 @@
   (setq url-proxy-services '(("http" . "proxy.sin.sap.corp:8080")
                              ("https" . "proxy.sin.sap.corp:8080")))
   )
+
+(defun home-proxy()
+  (interactive)
+  (setq url-proxy-services '(("http" . "127.0.0.1:8118")))
+  )
+
 (defun no-proxy()
   (interactive)
   (setq url-proxy-services nil)
