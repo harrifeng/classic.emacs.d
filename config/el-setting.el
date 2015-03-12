@@ -8,7 +8,7 @@
        (package-install package)))
  '(
    ag
-   auto-complete
+   ;; auto-complete
    bm
    column-marker
    dash-at-point
@@ -43,8 +43,8 @@
 (setq ag-highlight-search t)
 
 ;; [A]uto-complete-------------------------------------------------------->>
-(require 'auto-complete-config)
-(ac-config-default)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
 
 ;; [B]m-toogle------------------------------------------------------------>>
 (require 'bm)

@@ -8,7 +8,7 @@
 
 (defun home-proxy()
   (interactive)
-  (setq url-proxy-services '(("http" . "127.0.0.1:8118")))
+  (setq url-proxy-services '(("http" . "127.0.0.1:7777")))
   )
 
 (defun no-proxy()
