@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Home-Desktop-Ubuntu1204-ROOT"
+(("docker"
+ (filename . "/ssh:docker@192.168.59.104:/home/docker/")
+ (front-context-string . ".ash_history\n  -")
+ (rear-context-string . "72 Mar 10 00:49 ")
+ (position . 237))
+("Home-Desktop-Ubuntu1204-ROOT"
  (filename . "/plink:hfeng@192.168.142.130|sudo:root@192.168.142.130:/etc")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "73 Sep  8 00:37 ")
