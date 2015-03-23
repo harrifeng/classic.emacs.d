@@ -198,8 +198,6 @@
             <div id=\"nav\">
                 <ul>
                     <li><a href=\"/\">首页</a></li>
-                    <li><a href=\"/notes.html\">读书笔记</a></li>
-                    <li><a href=\"/algo.html\">算法</a></li>
                     <li><a href=\"/about.html\">About Me</a></li>
                     <li>
                     </li>
