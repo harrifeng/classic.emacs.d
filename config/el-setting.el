@@ -20,7 +20,6 @@
    helm-projectile
    highlight-indentation
    highlight-symbol
-   highline
    htmlize
    magit
    markdown-mode
@@ -93,11 +92,6 @@
 (global-set-key [f3] 'highlight-symbol-next)
 (global-set-key [(shift f3)] 'highlight-symbol-prev)
 (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
-
-;; [H]ighline-mode-------------------------------------------------------->>
-(require 'highline)
-(highline-mode 1)
-(global-set-key [f8] 'highline-mode)
 
 ;; To customize the background color
 ;(set-face-background 'highline-face "#333")
