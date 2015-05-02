@@ -10,3 +10,6 @@
 
 ;; spell checking
 (setq ispell-program-name "aspell.exe")
+
+;; sql-mysql
+(setq sql-mysql-options '("-C" "-t" "-f" "-n"))

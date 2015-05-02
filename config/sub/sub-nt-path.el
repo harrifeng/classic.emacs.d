@@ -45,6 +45,9 @@
 (defconst my-graphviz-path
   (concat my-dev "Graphviz/bin/"))
 
+(defconst my-mysql-path
+  (concat my-dev "Mysql/bin/"))
+
 (setenv "PATH"
         (concat
          my-tool-path ";"
@@ -59,6 +62,7 @@
          my-mingw-path ";"
          my-graphviz-path ";"
          my-util-path ";"
+         my-mysql-path ";"
          (getenv "PATH")))
 
 (setenv "JAVA_HOME"
