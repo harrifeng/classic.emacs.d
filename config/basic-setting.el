@@ -84,7 +84,7 @@
    ((string-match system-name "hfeng-thinkpad")
     ":pixelsize=14")
    ((string-match system-name "pvgm50860487a.dhcp.pvgl.sap.corp")
-    ":pixelsize=13")
+    ":pixelsize=12")
    (":pixelsize=18")))
 
 ;; red some color
