@@ -81,8 +81,8 @@
   (cond
    ((string-match system-name "hfeng-desktop")
     ":pixelsize=18")
-   ((string-match system-name "hfeng-thinkpad")
-    ":pixelsize=14")
+   ((string-match system-name "hfeng-notebook")
+    ":pixelsize=15")
    ((string-match system-name "pvgm50860487a.dhcp.pvgl.sap.corp")
     ":pixelsize=12")
    (":pixelsize=18")))

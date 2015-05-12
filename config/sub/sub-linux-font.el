@@ -2,4 +2,5 @@
 
 ;; Setting English Font
 (set-face-attribute
-  'default nil :font "Courier 10 Pitch 14")
+ 'default nil :font (concat
+                     "Courier 10 Pitch " my-font-size))
