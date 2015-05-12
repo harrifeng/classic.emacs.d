@@ -312,3 +312,8 @@ minibuffer"
   "insert the current date and time into mini-buffer."
   (interactive)
   (insert (format-time-string "%y%m%d_%H%M%S" (current-time))))
+
+(defun indent-whole ()
+  (interactive)
+  (indent-region (point-min) (point-max))
+  (message "format successfully"))
