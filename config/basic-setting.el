@@ -23,18 +23,18 @@
 ;;auto expand
 (setq hippie-expand-try-functions-list
       '(try-expand-line ;; whole line first
-	try-expand-line-all-buffers
-	try-expand-list
-	try-expand-list-all-buffers
-	try-expand-dabbrev
-	try-expand-dabbrev-visible
-	try-expand-dabbrev-all-buffers
-	try-expand-dabbrev-from-kill
-	try-complete-file-name
-	try-complete-file-name-partially
-	try-complete-lisp-symbol
-	try-complete-lisp-symbol-partially
-	try-expand-whole-kill))
+        try-expand-line-all-buffers
+        try-expand-list
+        try-expand-list-all-buffers
+        try-expand-dabbrev
+        try-expand-dabbrev-visible
+        try-expand-dabbrev-all-buffers
+        try-expand-dabbrev-from-kill
+        try-complete-file-name
+        try-complete-file-name-partially
+        try-complete-lisp-symbol
+        try-complete-lisp-symbol-partially
+        try-expand-whole-kill))
 
 ;;Custom setting saved file location
 (setq abbrev-file-name (concat my-lisps-path ".abbrev_defs"))
@@ -72,7 +72,7 @@
 ;; packages setting, this will work on all platforms, although unix-link system
 ;; can use el-get, package still exist as supplementary
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (package-initialize)
 
