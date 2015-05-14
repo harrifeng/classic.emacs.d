@@ -15,7 +15,7 @@
 (global-set-key (kbd "C-c C-,")      'pop-global-mark)
 (global-set-key (kbd "<f4>")         'loop-alpha)
 (global-set-key (kbd "<f5>")         'revert-buffer)
-(global-set-key (kbd "<f7>"          'indent-whole))
+(global-set-key (kbd "<f7>")         'indent-whole)
 (global-set-key (kbd "<f12>")        'whitespace-mode)
 (global-set-key (kbd "<C-f11>")      'toggle-tool-bar-mode-from-frame)
 (global-set-key (kbd "M-;")          'qiang-comment-dwim-line)
