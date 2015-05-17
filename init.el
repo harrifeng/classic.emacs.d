@@ -5,7 +5,6 @@
 (add-to-list 'load-path my-lisps-path)
 
 (require 'basic-setting)
-(require 'helpfunc-setting)
 (require 'systype-setting)
 (require 'path-setting)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;

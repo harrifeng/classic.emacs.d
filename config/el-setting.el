@@ -159,7 +159,7 @@
         yas/completing-prompt
         yas/no-prompt))
 ;; [Z]en-and-art-theme---------------------------------------------------->>
-(load-theme 'zen-and-art t)
+;(load-theme 'zen-and-art t)
 
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode")
