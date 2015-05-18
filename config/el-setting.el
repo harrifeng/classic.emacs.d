@@ -29,6 +29,7 @@
    projectile
    restclient
    rvm
+   rust-mode
    scss-mode
    smart-mode-line-powerline-theme
    solarized-theme
