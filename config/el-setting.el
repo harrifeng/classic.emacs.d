@@ -34,6 +34,7 @@
    smart-mode-line-powerline-theme
    solarized-theme
    sublime-themes
+   toml-mode
    web-mode
    yasnippet dropdown-list
    zen-and-art-theme
