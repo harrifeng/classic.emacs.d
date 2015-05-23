@@ -6,9 +6,15 @@
                              ("https" . "proxy.sin.sap.corp:8080")))
   )
 
-(defun home-proxy()
+(defun local-proxy()
   (interactive)
   (setq url-proxy-services '(("http" . "127.0.0.1:7777")))
+  )
+
+;; boot2docker proxy
+(defun b2d-proxy()
+  (interactive)
+  (setq url-proxy-services '(("http" . "192.168.59.3:7777")))
   )
 
 (defun no-proxy()
