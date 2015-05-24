@@ -2,54 +2,15 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("docker"
- (filename . "/ssh:docker@192.168.59.104:/home/docker/")
- (front-context-string . ".ash_history\n  -")
- (rear-context-string . "72 Mar 10 00:49 ")
- (position . 237))
+(
 ("Home-Desktop-Ubuntu1204-ROOT"
- (filename . "/plink:hfeng@192.168.142.130|sudo:root@192.168.142.130:/etc")
+ (filename . "/plink:hfeng@192.168.59.103#12345|sudo:root@192.168.59.103#12345:/etc")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "73 Sep  8 00:37 ")
  (position . 194))
 ("Home-Desktop-Ubuntu1204"
- (filename . "/plink:hfeng@192.168.142.130:/home/hfeng")
+ (filename . "/plink:hfeng@192.168.59.103#12345:/home/hfeng")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "73 Sep  8 00:37 ")
  (position . 194))
-("PVGL50865939A-i309511"
- (filename . "/ssh:i309511@PVGL50865939A:/sapmnt/HOME/i309511/")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "68 Sep  3 10:12 ")
- (position . 209))
-("ubuntu1404-ROOT"
- (filename . "/sudo:root@10.211.55.7:/etc/")
- (front-context-string . ".pwd.lock\n  drwx")
- (rear-context-string . " 0 Apr 17 05:02 ")
- (position . 190))
-("ubuntu-1404"
- (filename . "/ssh:hfeng@10.211.55.8:/home/hfeng/")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "51 Aug 14 06:05 ")
- (position . 190))
-("Ubuntu-ROOT-1204"
- (filename . "/ssh:hfeng@10.211.55.7|sudo:root@10.211.55.7:/etc")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "34 Jul 30 12:34 ")
- (position . 193))
-("mo-i309511"
- (filename . "/ssh:i309511@10.97.64.141:/home/i309511/")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "21 Aug  1 07:38 ")
- (position . 222))
-("Ubuntu-1204"
- (filename . "/ssh:hfeng@10.211.55.7:/home/hfeng/")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "68 Jul 30 17:58 ")
- (position . 190))
-("mo-ROOT-i309511"
- (filename . "/ssh:i309511@10.97.64.141|sudo:root@10.97.64.141:/etc")
- (front-context-string . ".bash_history\n  ")
- (rear-context-string . "68 Jul  5 22:00 ")
- (position . 190))
 )
