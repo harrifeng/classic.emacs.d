@@ -3,4 +3,4 @@
 ;; Setting English Font
 (set-face-attribute
  'default nil :font (concat
-                     "Courier 10 Pitch " my-font-size))
+                     "WenQuanYi Zen Hei Mono " my-font-size))
