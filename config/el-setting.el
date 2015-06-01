@@ -12,6 +12,7 @@
    bm
    column-marker
    dash-at-point
+   dockerfile-mode
    grep-a-lot
    groovy-mode
    git-gutter
