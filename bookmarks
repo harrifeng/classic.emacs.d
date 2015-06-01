@@ -2,7 +2,16 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(
+(("vagrant-ROOT-etc"
+ (filename . "/sudo:root@127.0.0.1#2222:/etc/")
+ (front-context-string . "acpi\n  -rw-r--r-")
+ (rear-context-string . "96 May 30 20:41 ")
+ (position . 193))
+("vagrant-ct"
+ (filename . "/ssh:vagrant@127.0.0.1#2222:/home/vagrant/")
+ (front-context-string . "bash_history\n  -")
+ (rear-context-string . "7 Jun  1 11:09 .")
+ (position . 210))
 ("Home-Desktop-Ubuntu1204-ROOT"
  (filename . "/plink:hfeng@192.168.59.103#12345|sudo:root@192.168.59.103#12345:/etc")
  (front-context-string . ".bash_history\n  ")
