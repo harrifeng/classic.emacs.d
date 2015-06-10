@@ -13,6 +13,7 @@
    column-marker
    dash-at-point
    dockerfile-mode
+   go-mode
    grep-a-lot
    groovy-mode
    git-gutter
