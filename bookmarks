@@ -2,11 +2,11 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("etc"
- (filename . "/sudo:root@127.0.0.1#2222:/etc/")
- (front-context-string . "acpi\n  -rw-r--r-")
- (rear-context-string . "96 May 30 20:41 ")
- (position . 193))
+(("2222-etc"
+ (filename . "/sudo:root@192.168.59.103#2222:/etc/")
+ (front-context-string . ".java\n  -rw-----")
+ (rear-context-string . "96 Jun  5 04:42 ")
+ (position . 201))
 ("i309511-redhat"
  (filename . "/ssh:i309511@10.58.67.53:/sapmnt/HOME/i309511/")
  (front-context-string . ".abrt\n  drwx----")
