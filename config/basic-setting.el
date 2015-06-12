@@ -112,7 +112,7 @@
 (setq column-number-mode t)
 (customize-set-variable 'scroll-bar-mode nil)
 (blink-cursor-mode nil)
-(tool-bar-mode -1)
+
 ;; Delete the CR and the end of the line when Ctrl + K at beginning of the line
 (setq-default kill-whole-line t)
 ;; if kill content are the same, ignore them
