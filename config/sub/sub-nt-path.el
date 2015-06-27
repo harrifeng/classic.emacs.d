@@ -7,11 +7,15 @@
 (defconst my-util-path
   (concat my-dev "Util/"))
 
-(defconst my-ruby-path
-  (concat my-dev "Ruby200/bin/"))
+(defconst my-rust-path
+  (concat my-dev "Rust/bin/"))
+
+(defconst my-go-path
+  (concat my-dev "Go/bin/"))
 
 (defconst my-python-path
-  (concat my-dev "Python266/App/"))
+  (concat my-dev "Pythonf275/App/"))
+
 (defconst my-python-script-path
   (concat my-python-path "Scripts/"))
 
@@ -21,48 +25,26 @@
 (defconst my-mingw-path
   (concat my-dev "MinGW/bin/"))
 
-(defconst my-tool-path
-  (concat my-dev "Tools/"))
-
 (defconst my-java-home
   (concat my-dev "Java/"))
 
 (defconst my-java-path
   (concat my-dev "Java/bin/"))
 
-(defconst my-java-util-path
-  (concat my-dev "JavaUtil/"))
-
-(defconst my-ant-path
-  (concat my-java-util-path "ant/bin"))
-
-(defconst my-maven-path
-  (concat my-java-util-path "maven/bin"))
-
-(defconst my-gradle-path
-  (concat my-java-util-path "gradle/bin"))
-
 (defconst my-graphviz-path
   (concat my-dev "Graphviz/bin/"))
 
-(defconst my-mysql-path
-  (concat my-dev "Mysql/bin/"))
-
 (setenv "PATH"
         (concat
-         my-tool-path ";"
          my-git-path ";"
          my-python-path ";"
-         my-ruby-path ";"
+         my-rust-path ";"
+         my-go-path ";"
          my-python-script-path ";"
          my-java-path ";"
-         my-ant-path ";"
-         my-maven-path ";"
-         my-gradle-path ";"
          my-mingw-path ";"
          my-graphviz-path ";"
          my-util-path ";"
-         my-mysql-path ";"
          (getenv "PATH")))
 
 (setenv "JAVA_HOME"
