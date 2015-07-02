@@ -28,6 +28,9 @@
 (defconst my-java-home
   (concat my-dev "Java/"))
 
+(defconst my-go-home
+  (concat my-dev "Go/"))
+
 (defconst my-java-path
   (concat my-dev "Java/bin/"))
 
@@ -49,3 +52,6 @@
 
 (setenv "JAVA_HOME"
         my-java-home)
+
+(setenv "GOROOT"
+        my-go-home)
