@@ -23,16 +23,18 @@
    highlight-indentation
    highlight-symbol
    htmlize
+   inf-ruby
+   js2-mode
    magit
    markdown-mode
    multi-term
    multiple-cursors
-   inf-ruby
    projectile
    restclient
    rvm
    rust-mode
    scss-mode
+   slime
    smart-mode-line-powerline-theme
    solarized-theme
    sublime-themes
@@ -188,3 +190,9 @@
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "C-;") 'yas-expand)
+
+;; slime && slime-helper
+;; installation: sbcl --load quicklisp.lisp
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; sbcl should be in the path
+(setq inferior-lisp-program "sbcl")
