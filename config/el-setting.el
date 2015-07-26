@@ -193,6 +193,8 @@
 
 ;; slime && slime-helper
 ;; installation: sbcl --load quicklisp.lisp
-(load (expand-file-name "~/quicklisp/slime-helper.el"))
-;; sbcl should be in the path
-(setq inferior-lisp-program "sbcl")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (load (expand-file-name "~/quicklisp/slime-helper.el")) ;;
+;; ;; sbcl should be in the path                           ;;
+;; (setq inferior-lisp-program "sbcl")                     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
