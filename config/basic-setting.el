@@ -80,7 +80,7 @@
 (defconst my-font-size
   (cond
    ((string-match system-name "hfeng-desktop")
-    ":pixelsize=18")
+    ":pixelsize=28")
    ((string-match system-name "hfeng-laptop")
     ":pixelsize=15")
    ((string-match system-name "pvgm50860487a.dhcp.pvgl.sap.corp")
