@@ -1,6 +1,7 @@
 (provide 'sub-linux-font)
 
 ;; Setting English Font
+;; on Ubuntu need install font: sudo apt-get install -y fonts-inconsolata
 (set-face-attribute
  'default nil :font (concat
-                     "WenQuanYi Zen Hei Mono " my-font-size))
+                     "Inconsolata" my-font-size))
