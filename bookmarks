@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("jam-dev-vm"
+(("32-ubuntu-vagrant"
+ (filename . "/ssh:vagrant@127.0.0.1#2346:/home/vagrant/")
+ (front-context-string . "tmp\n  -rw-------")
+ (rear-context-string . "96 Aug 16 02:40 ")
+ (position . 698))
+("jam-dev-vm"
  (filename . "/ssh:dev@172.16.61.128:/home/dev/")
  (front-context-string . ".ICEauthority\n  ")
  (rear-context-string . "16 Jun 16 00:52 ")
@@ -18,12 +23,12 @@
  (rear-context-string . "96 Sep 15  2014 ")
  (position . 217))
 ("vagrant-ROOT-etc"
- (filename . "/ssh:vagrant@127.0.0.1#2222|sudo:root@127.0.0.1#2222:/etc")
+ (filename . "/ssh:vagrant@127.0.0.1#2345|sudo:root@127.0.0.1#2345:/etc")
  (front-context-string . "acpi\n  -rw-r--r-")
  (rear-context-string . "96 May 30 20:41 ")
  (position . 193))
 ("vagrant-ct"
- (filename . "/ssh:vagrant@127.0.0.1#2222:/home/vagrant/")
+ (filename . "/ssh:vagrant@127.0.0.1#2345:/home/vagrant/")
  (front-context-string . "bash_history\n  -")
  (rear-context-string . "7 Jun  1 11:09 .")
  (position . 210))
