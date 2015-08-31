@@ -8,6 +8,7 @@
        (package-install package)))
  '(
    ag
+   avy
    ;; auto-complete
    bm
    column-marker
@@ -51,6 +52,9 @@
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
 
+;; [A]vy------------------------------------------------------------------>>
+(global-set-key (kbd "C-'")          'avy-goto-char-2)
+
 ;; [B]m-toogle------------------------------------------------------------>>
 (require 'bm)
 (global-set-key (kbd "C-x m")        'bm-toggle)
@@ -75,6 +79,7 @@
 (global-set-key (kbd "C-M-y")        'helm-show-kill-ring)
 (global-set-key (kbd "C-c C-m")      'helm-M-x)
 (global-set-key (kbd "C-x C-m")      'helm-M-x)
+(global-set-key (kbd "C-s")          'helm-swoop)
 
 ;; Only works for helm-ag, not for helm-do-ag
 (setq helm-ag-command-option "--all-text")
