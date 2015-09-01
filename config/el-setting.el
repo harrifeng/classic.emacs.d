@@ -20,6 +20,7 @@
    git-gutter
    helm
    helm-ag
+   helm-swoop
    helm-projectile
    highlight-indentation
    highlight-symbol
@@ -80,6 +81,12 @@
 (global-set-key (kbd "C-c C-m")      'helm-M-x)
 (global-set-key (kbd "C-x C-m")      'helm-M-x)
 (global-set-key (kbd "C-s")          'helm-swoop)
+
+(setq helm-swoop-split-direction 'split-window-horizontally)
+
+;; disable pre-input
+(setq helm-swoop-pre-input-function
+      (lambda () ""))
 
 ;; Only works for helm-ag, not for helm-do-ag
 (setq helm-ag-command-option "--all-text")
