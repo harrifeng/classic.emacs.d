@@ -17,8 +17,8 @@
  (front-context-string . ".java\n  -rw-----")
  (rear-context-string . "96 Jun  5 04:42 ")
  (position . 201))
-("i309511-redhat"
- (filename . "/ssh:i309511@10.58.67.53:/sapmnt/HOME/i309511/")
+("Jam-redhat"
+ (filename . "/ssh:Jam@10.58.66.196:/home/Jam/")
  (front-context-string . ".abrt\n  drwx----")
  (rear-context-string . "96 Sep 15  2014 ")
  (position . 217))
