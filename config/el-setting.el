@@ -15,6 +15,7 @@
    dash-at-point
    dockerfile-mode
    go-mode
+   gotest
    grep-a-lot
    groovy-mode
    git-gutter
@@ -91,6 +92,15 @@
 ;; Only works for helm-ag, not for helm-do-ag
 (setq helm-ag-command-option "--all-text")
 (setq helm-ag-source-type 'file-line)
+
+;; [G]olang relative------------------------------------------------------>>
+(add-hook 'before-save-hook #'gofmt-before-save)
+(require 'gotest)
+(define-key go-mode-map (kbd "C-x f") 'go-test-current-file)
+(define-key go-mode-map (kbd "C-x t") 'go-test-current-test)
+(define-key go-mode-map (kbd "C-x p") 'go-test-current-project)
+(define-key go-mode-map (kbd "C-x r") 'go-run)
+(define-key go-mode-map (kbd "C-c r") 'go-run)
 
 ;; [H]ighlight-indentation------------------------------------------------>>
 (require 'highlight-indentation)
