@@ -82,7 +82,7 @@
    ((string-match system-name "hfeng-desktop")
     ":pixelsize=28")
    ((string-match system-name "hfeng-laptop")
-    ":pixelsize=15")
+    ":pixelsize=18")
    ((string-match system-name "vagrant-ubuntu-vivid-64")
     ":pixelsize=15")
    ((string-match system-name "pvgm50860487a.dhcp.pvgl.sap.corp")

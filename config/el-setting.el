@@ -40,6 +40,7 @@
    slime
    smart-mode-line-powerline-theme
    solarized-theme
+   spacemacs-theme
    sublime-themes
    toml-mode
    web-mode
@@ -81,9 +82,11 @@
 (global-set-key (kbd "C-M-y")        'helm-show-kill-ring)
 (global-set-key (kbd "C-c C-m")      'helm-M-x)
 (global-set-key (kbd "C-x C-m")      'helm-M-x)
-(global-set-key (kbd "C-s")          'helm-swoop)
+(global-set-key (kbd "C-c s")        'helm-swoop)
+(global-set-key (kbd "C-c C-s")      'helm-swoop)
 
-(setq helm-swoop-split-direction 'split-window-horizontally)
+;; default is vertical
+;; (setq helm-swoop-split-direction 'split-window-horizontally)
 
 ;; disable pre-input
 (setq helm-swoop-pre-input-function
@@ -153,11 +156,16 @@
 (sml/apply-theme 'dark)
 ;; (sml/apply-theme 'powerline)
 
-;; [S]olarized-thems------------------------------------------------------>>
+
+
+;; [T]heme---------s------------------------------------------------------>>
+(load-theme 'spacemacs-dark t)
+;; (load-theme 'spacemacs-dark t)
 ;; (load-theme 'solarized-dark t)
-;; [S]ublime-themes------------------------------------------------------->>
 ;; (load-theme 'hickey t)
 ;; (load-theme 'wheatgrass t)
+;; (load-theme 'cyberpunk t)
+;; (load-theme 'zen-and-art t)
 
 ;; [W]eb-mode------------------------------------------------------------->>
 (require 'web-mode)
@@ -186,14 +194,11 @@
         yas/x-prompt
         yas/completing-prompt
         yas/no-prompt))
-;; [Z]en-and-art-theme---------------------------------------------------->>
-(load-theme 'zen-and-art t)
 
+;; Misc------------------------------------------------------------------->>
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-
-
 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
