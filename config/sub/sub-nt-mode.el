@@ -4,9 +4,8 @@
 (require 'python)
 
 (setq
- python-shell-interpreter "python.exe"
- python-shell-interpreter-args (concat "-i " (concat my-python-script-path
-                                                     "ipython-script.py"))) 
+ ;; WinPython has ipython.exe with it
+ python-shell-interpreter "ipython.exe")
 
 ;; spell checking
 (setq ispell-program-name "aspell.exe")

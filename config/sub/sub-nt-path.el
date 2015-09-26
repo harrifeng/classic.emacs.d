@@ -14,7 +14,7 @@
   (concat my-dev "Go/bin/"))
 
 (defconst my-python-path
-  (concat my-dev "Python275/App/"))
+  (concat my-dev "Python2710/"))
 
 (defconst my-python-script-path
   (concat my-python-path "Scripts/"))
