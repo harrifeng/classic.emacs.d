@@ -1,4 +1,4 @@
 # contributor: Harri Feng <harrifeng@gmail.com>
-#name : Debugger
+# name: show home folder `~`
 # --
-ruby -I test
+~/
