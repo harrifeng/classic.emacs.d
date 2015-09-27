@@ -11,6 +11,7 @@
    avy
    ;; auto-complete
    bm
+   company
    column-marker
    dash-at-point
    dockerfile-mode
@@ -35,6 +36,7 @@
    projectile
    restclient
    rvm
+   racer
    rust-mode
    scss-mode
    slime
@@ -148,6 +150,16 @@
 ;; [R]estclient]---------------------------------------------------------->>
 (require 'restclient)
 (add-to-list 'auto-mode-alist '("\\.http?\\'" . restclient-mode))
+
+
+;; [R]ust----------------------------------------------------------------->>
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
+
+(add-hook 'racer-mode-hook #'company-mode)
+
+(global-set-key (kbd "TAB") #'company-indent-or-complete-common) ;
+(setq company-tooltip-align-annotations t)
 
 ;; [S]mart-mode-line-powerline-theme-------------------------------------->>
 (require 'smart-mode-line)

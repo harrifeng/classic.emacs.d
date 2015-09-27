@@ -7,8 +7,13 @@
 (defconst my-util-path
   (concat my-dev "Util/"))
 
+(defconst my-rust-home
+  (concat my-dev "Rust/"))
 (defconst my-rust-path
-  (concat my-dev "Rust/bin/"))
+  (concat my-rust-home "bin/"))
+
+(setq racer-rust-src-path
+      (concat my-rust-home "ForRacer/src"))
 
 (defconst my-go-path
   (concat my-dev "Go/bin/"))
