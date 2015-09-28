@@ -13,3 +13,6 @@
 	 "/usr/sbin"      ":"
 	 (getenv "PATH")
 	 ))
+
+(setq racer-rust-src-path
+      (concat (getenv "HOME") "/version-src/rustc-1.3.0/src"))
