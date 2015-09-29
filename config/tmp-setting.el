@@ -7,6 +7,8 @@
  '(
    multi-term
    helm-mt
+   company-go
+   exec-path-from-shell
    ))
 
 
@@ -33,6 +35,12 @@
 (add-hook 'rust-mode-hook
       (lambda ()
         (define-key rust-mode-map (kbd "<f9>") 'rust-save-compile-and-run)))
+
+
+(add-hook 'go-mode-hook 'company-mode)
+(add-hook 'go-mode-hook (lambda ()
+  (set (make-local-variable 'company-backends) '(company-go))
+  (company-mode)))
 
 (add-hook 'go-mode-hook
       (lambda ()
