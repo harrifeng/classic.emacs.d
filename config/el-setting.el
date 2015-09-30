@@ -12,9 +12,11 @@
    ;; auto-complete
    bm
    company
+   company-go
    column-marker
    dash-at-point
    dockerfile-mode
+   exec-path-from-shell
    go-mode
    gotest
    grep-a-lot
@@ -107,6 +109,15 @@
 (define-key go-mode-map (kbd "C-x r") 'go-run)
 (define-key go-mode-map (kbd "C-c r") 'go-run)
 
+(add-hook 'go-mode-hook 'company-mode)
+(add-hook 'go-mode-hook (lambda ()
+  (set (make-local-variable 'company-backends) '(company-go))
+  (company-mode)))
+
+(add-hook 'go-mode-hook
+      (lambda ()
+        (define-key go-mode-map (kbd "<f9>") 'go-run)))
+
 ;; [H]ighlight-indentation------------------------------------------------>>
 (require 'highlight-indentation)
 
@@ -154,11 +165,29 @@
 
 ;; [R]ust----------------------------------------------------------------->>
 (add-hook 'rust-mode-hook #'racer-mode)
-
 (add-hook 'racer-mode-hook #'company-mode)
 
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common) ;
+
 (setq company-tooltip-align-annotations t)
+
+(defun rust-save-compile-and-run ()
+  (interactive)
+  (save-buffer)
+
+  (if (locate-dominating-file (buffer-file-name) "Cargo.toml")
+
+      (compile "cargo run")
+
+    (compile
+     (format "rustc %s && %s"
+         (buffer-file-name)
+         (file-name-sans-extension (buffer-file-name))))))
+
+(add-hook 'rust-mode-hook
+      (lambda ()
+        (define-key rust-mode-map (kbd "<f9>") 'rust-save-compile-and-run)))
+
 
 ;; [S]mart-mode-line-powerline-theme-------------------------------------->>
 (require 'smart-mode-line)
