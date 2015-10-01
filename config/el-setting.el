@@ -106,8 +106,8 @@
 (define-key go-mode-map (kbd "C-x f") 'go-test-current-file)
 (define-key go-mode-map (kbd "C-x t") 'go-test-current-test)
 (define-key go-mode-map (kbd "C-x p") 'go-test-current-project)
-(define-key go-mode-map (kbd "C-x r") 'go-run)
-(define-key go-mode-map (kbd "C-c r") 'go-run)
+;; (define-key go-mode-map (kbd "C-x r") 'go-run)
+;; (define-key go-mode-map (kbd "C-c r") 'go-run)
 
 (add-hook 'go-mode-hook 'company-mode)
 (add-hook 'go-mode-hook (lambda ()
@@ -167,7 +167,7 @@
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'company-mode)
 
-(global-set-key (kbd "TAB") #'company-indent-or-complete-common) ;
+(global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
 (setq company-tooltip-align-annotations t)
 
@@ -181,12 +181,12 @@
 
     (compile
      (format "rustc %s && %s"
-         (buffer-file-name)
-         (file-name-sans-extension (buffer-file-name))))))
+             (buffer-file-name)
+             (file-name-sans-extension (buffer-file-name))))))
 
 (add-hook 'rust-mode-hook
-      (lambda ()
-        (define-key rust-mode-map (kbd "<f9>") 'rust-save-compile-and-run)))
+          (lambda ()
+            (define-key rust-mode-map (kbd "<f9>") 'rust-save-compile-and-run)))
 
 
 ;; [S]mart-mode-line-powerline-theme-------------------------------------->>
