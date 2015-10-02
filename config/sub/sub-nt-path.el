@@ -35,6 +35,7 @@
 
 (defconst my-go-home
   (concat my-dev "Go/"))
+(setenv "GOROOT" my-go-home)
 
 (defconst my-java-path
   (concat my-dev "Java/bin/"))
@@ -42,12 +43,22 @@
 (defconst my-graphviz-path
   (concat my-dev "Graphviz/bin/"))
 
+
+(defconst my-go-space
+  (concat my-dev "Code/golang-space"))
+(setenv "GOPATH" my-go-space)
+
+(defconst my-go-space-path
+  (concat my-go-space "/bin"))
+
+
 (setenv "PATH"
         (concat
          my-git-path ";"
          my-python-path ";"
          my-rust-path ";"
          my-go-path ";"
+         my-go-space-path ";"
          my-python-script-path ";"
          my-java-path ";"
          my-mingw-path ";"
@@ -57,6 +68,3 @@
 
 (setenv "JAVA_HOME"
         my-java-home)
-
-(setenv "GOROOT"
-        my-go-home)
