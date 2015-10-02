@@ -116,7 +116,9 @@
 
 (add-hook 'go-mode-hook
       (lambda ()
-        (define-key go-mode-map (kbd "<f9>") 'go-run)))
+        (define-key go-mode-map (kbd "<f9>") 'go-run)
+        (define-key go-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+        ))
 
 ;; [H]ighlight-indentation------------------------------------------------>>
 (require 'highlight-indentation)
@@ -167,7 +169,6 @@
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'company-mode)
 
-(global-set-key (kbd "TAB") #'company-indent-or-complete-common) ;
 
 (setq company-tooltip-align-annotations t)
 
@@ -186,7 +187,9 @@
 
 (add-hook 'rust-mode-hook
       (lambda ()
-        (define-key rust-mode-map (kbd "<f9>") 'rust-save-compile-and-run)))
+        (define-key rust-mode-map (kbd "<f9>") 'rust-save-compile-and-run)
+        (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+        ))
 
 
 ;; [S]mart-mode-line-powerline-theme-------------------------------------->>
