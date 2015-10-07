@@ -46,6 +46,7 @@
    solarized-theme
    spacemacs-theme
    sublime-themes
+   switch-window
    toml-mode
    web-mode
    yasnippet dropdown-list
@@ -199,7 +200,8 @@
 (sml/apply-theme 'dark)
 ;; (sml/apply-theme 'powerline)
 
-
+;; [S]witch-windows
+(global-set-key (kbd "C-x o") 'switch-window)
 
 ;; [T]heme---------s------------------------------------------------------>>
 (load-theme 'spacemacs-dark t)

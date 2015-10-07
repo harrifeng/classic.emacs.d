@@ -34,6 +34,6 @@
 (add-hook 'java-mode-hook
           (lambda ()
             (define-key java-mode-map (kbd "<f9>") 'java-save-compile-and-run)
-            (define-key java-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+            ;; (define-key java-mode-map (kbd "TAB") #'company-indent-or-complete-common)
             ))
 
