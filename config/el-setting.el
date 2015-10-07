@@ -182,9 +182,11 @@
       (compile "cargo run")
 
     (compile
-     (format "rustc %s && %s"
+     (format "rustc %s && %s && rm %s"
          (buffer-file-name)
-         (file-name-sans-extension (buffer-file-name))))))
+         (file-name-sans-extension (buffer-file-name))
+         (file-name-sans-extension (buffer-file-name))
+         ))))
 
 (add-hook 'rust-mode-hook
       (lambda ()
