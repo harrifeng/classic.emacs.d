@@ -21,8 +21,12 @@
 (defun java-save-compile-and-run()
   (interactive)
   (save-buffer)
+  (if (eq system-type 'windows-nt)
+      (setq java-run-command "cd %s && gradlew.bat run -DmainClass=%s")
+    (setq java-run-command "cd %s && export TERM=dumb && ./gradlew run -DmainClass=%s"))
   (compile
-   (format "cd $(git rev-parse --show-cdup) && export TERM=dumb && ./gradlew run -DmainClass=%s"
+   (format java-run-command
+           (substring (buffer-file-name) 0  (string-match "src" (buffer-file-name)) )
            (mapconcat 'identity
                       (split-string
                        (substring (file-name-sans-extension (buffer-file-name))
