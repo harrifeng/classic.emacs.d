@@ -49,6 +49,7 @@
    switch-window
    toml-mode
    web-mode
+   yaml-mode
    yasnippet dropdown-list
    zen-and-art-theme
    ))

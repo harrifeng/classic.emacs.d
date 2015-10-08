@@ -68,6 +68,7 @@
 (setq grep-window-height 12)
 
 (setenv "PAGER" "cat")
+(setenv "TERM"  "dumb")
 
 ;; packages setting, this will work on all platforms, although unix-link system
 ;; can use el-get, package still exist as supplementary
