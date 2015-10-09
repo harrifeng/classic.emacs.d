@@ -180,13 +180,15 @@
   (if (locate-dominating-file (buffer-file-name) "Cargo.toml")
 
       (compile "cargo run")
-
+    (if (eq system-type 'windows-nt)
+        (setq rust-run-command "rustc %s && %s && rm %s.exe")
+      (setq rust-run-command "rustc %s && %s && rm %s"))
     (compile
-     (format "rustc %s && %s && rm %s"
-         (buffer-file-name)
-         (file-name-sans-extension (buffer-file-name))
-         (file-name-sans-extension (buffer-file-name))
-         ))))
+     (format rust-run-command
+             (buffer-file-name)
+             (file-name-sans-extension (buffer-file-name))
+             (file-name-sans-extension (buffer-file-name))
+             ))))
 
 (add-hook 'rust-mode-hook
       (lambda ()
