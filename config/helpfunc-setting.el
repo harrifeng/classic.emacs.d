@@ -11,10 +11,10 @@
   (setq url-proxy-services '(("http" . "127.0.0.1:7777")))
   )
 
-;; boot2docker proxy
-(defun b2d-proxy()
+;; vagrant
+(defun vg-proxy()
   (interactive)
-  (setq url-proxy-services '(("http" . "192.168.59.3:7777")))
+  (setq url-proxy-services '(("http" . "10.0.2.2:7777")))
   )
 
 (defun no-proxy()
