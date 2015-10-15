@@ -40,3 +40,5 @@
             (define-key java-mode-map (kbd "<f9>") 'java-save-compile-and-run)
             ))
 
+
+(desktop-save-mode 1)
