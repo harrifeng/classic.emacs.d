@@ -35,9 +35,27 @@
                                   (string-width (file-name-sans-extension
                                                  (buffer-file-name)))) "/") "."))))
 
+(defun java-save-compile-and-test()
+  (interactive)
+  (save-buffer)
+  (if (eq system-type 'windows-nt)
+      (setq java-run-command "cd %s && gradlew.bat test --tests %sTest")
+    (setq java-run-command "cd %s && export TERM=dumb && ./gradlew test --tests %sTest"))
+  (compile
+   (format java-run-command
+           (substring (buffer-file-name) 0  (string-match "src" (buffer-file-name)) )
+           (mapconcat 'identity
+                      (split-string
+                       (substring (file-name-sans-extension (buffer-file-name))
+                                  (string-match "org" (file-name-sans-extension
+                                                       (buffer-file-name)))
+                                  (string-width (file-name-sans-extension
+                                                 (buffer-file-name)))) "/") "."))))
+
 (add-hook 'java-mode-hook
           (lambda ()
             (define-key java-mode-map (kbd "<f9>") 'java-save-compile-and-run)
+            (define-key java-mode-map (kbd "<f8>") 'java-save-compile-and-test)
             ))
 
 
