@@ -116,9 +116,22 @@
   (set (make-local-variable 'company-backends) '(company-go))
   (company-mode)))
 
+
+(defun go-hfeng-run ()
+  (interactive)
+  (save-buffer)
+
+  (if (eq system-type 'windows-nt)
+      (setq rust-run-command "rustc %s && %s && rm %s.exe")
+    (setq rust-run-command "source ~/.bashrc && go run %s"))
+  (compile
+   (format rust-run-command
+           (buffer-file-name))))
+
+
 (add-hook 'go-mode-hook
       (lambda ()
-        (define-key go-mode-map (kbd "<f9>") 'go-run)
+        (define-key go-mode-map (kbd "<f9>") 'go-hfeng-run)
         (define-key go-mode-map (kbd "TAB") #'company-indent-or-complete-common)
         ))
 
