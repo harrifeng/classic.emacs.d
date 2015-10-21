@@ -222,9 +222,10 @@
 (global-set-key (kbd "C-x o") 'switch-window)
 
 ;; [T]heme---------s------------------------------------------------------>>
-(load-theme 'spacemacs-dark t)
+;; (load-theme 'spacemacs-dark t)
 ;; (load-theme 'spacemacs-dark t)
 ;; (load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 ;; (load-theme 'hickey t)
 ;; (load-theme 'wheatgrass t)
 ;; (load-theme 'cyberpunk t)
@@ -279,7 +280,7 @@
 ;; From now on, we use Ctrl + ; to expand the yasnippet
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
-(define-key yas-minor-mode-map (kbd "C-;") 'yas-expand)
+(define-key yas-minor-mode-map (kbd "C-i") 'yas-expand)
 
 ;; slime && slime-helper
 ;; installation: sbcl --load quicklisp.lisp

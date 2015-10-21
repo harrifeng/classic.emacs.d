@@ -36,8 +36,6 @@
 
 ;; Translate the problematic keys to the function key Hyper,
 ;; then bind this to the desired ctrl-i behavior
-(keyboard-translate ?\C-i ?\H-i)
-(global-set-key [?\H-i] 'whack-whitespace)
 
 (defun shell-mode-auto-rename-buffer (text)
   (if (eq major-mode 'shell-mode)
