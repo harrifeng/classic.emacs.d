@@ -7,7 +7,6 @@
  '(
    multi-term
    helm-mt
-   haskell-mode
    ))
 
 
@@ -59,7 +58,19 @@
             (define-key java-mode-map (kbd "<f8>") 'java-save-compile-and-test)
             ))
 
+(defun scheme-hfeng-run()
+  (interactive)
+  (save-buffer)
 
-;; haskell
-(add-hook 'haskell-mode-hook 'haskell-indent-mode)
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+  (if (eq system-type 'windows-nt)
+      (setq rust-run-command "scheme.exe load < %s")
+    (setq rust-run-command "scheme load < %s"))
+  (compile
+   (format rust-run-command
+           (buffer-file-name))))
+
+
+(add-hook 'scheme-mode-hook
+          (lambda ()
+            (define-key scheme-mode-map (kbd "<f9>") 'scheme-hfeng-run)
+            ))
