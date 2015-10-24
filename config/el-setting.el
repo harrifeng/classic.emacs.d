@@ -62,7 +62,8 @@
 ;; (ac-config-default)
 
 ;; [A]vy------------------------------------------------------------------>>
-(global-set-key (kbd "C-'")          'avy-goto-char)
+(global-set-key (kbd "C-x h")          'avy-goto-char)
+(global-set-key (kbd "C-c h")          'avy-goto-char)
 
 ;; [B]m-toogle------------------------------------------------------------>>
 (require 'bm)
