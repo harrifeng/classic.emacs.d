@@ -29,6 +29,7 @@
    highlight-indentation
    highlight-symbol
    htmlize
+   idle-highlight-mode
    inf-ruby
    js2-mode
    magit
@@ -289,3 +290,6 @@
 ;; ;; sbcl should be in the path                           ;;
 ;; (setq inferior-lisp-program "sbcl")                     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; idle-highlight-mode
+(add-hook 'prog-mode-hook 'idle-highlight-mode)
