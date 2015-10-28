@@ -9,12 +9,10 @@
  '(
    ag
    avy
-   ;; auto-complete
    bm
    company
    company-go
    column-marker
-   dash-at-point
    dockerfile-mode
    exec-path-from-shell
    go-mode
@@ -29,7 +27,6 @@
    highlight-indentation
    highlight-symbol
    htmlize
-   idle-highlight-mode
    inf-ruby
    js2-mode
    magit
@@ -38,7 +35,6 @@
    multiple-cursors
    projectile
    restclient
-   rvm
    racer
    rust-mode
    scss-mode
@@ -46,13 +42,11 @@
    smart-mode-line-powerline-theme
    solarized-theme
    spacemacs-theme
-   sublime-themes
    switch-window
    toml-mode
    web-mode
    yaml-mode
    yasnippet dropdown-list
-   zen-and-art-theme
    ))
 
 ;; [A]g------------------------------------------------------------------->>
@@ -283,13 +277,3 @@
 (define-key yas-minor-mode-map (kbd "TAB") nil)
 (define-key yas-minor-mode-map (kbd "C-i") 'yas-expand)
 
-;; slime && slime-helper
-;; installation: sbcl --load quicklisp.lisp
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (load (expand-file-name "~/quicklisp/slime-helper.el")) ;;
-;; ;; sbcl should be in the path                           ;;
-;; (setq inferior-lisp-program "sbcl")                     ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; idle-highlight-mode
-(add-hook 'prog-mode-hook 'idle-highlight-mode)

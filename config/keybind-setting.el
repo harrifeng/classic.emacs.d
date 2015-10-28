@@ -19,3 +19,7 @@
 (global-set-key (kbd "M-p")          'query-replace)
 (global-set-key (kbd "C-x C-g")      'helm-global-mark-ring)
 (global-set-key (kbd "C-c C-g")      'helm-global-mark-ring)
+;; Still need these key to work on the GUI emacs
+(global-set-key (kbd "<C-return>")   'mark-whole-buffer)
+(global-set-key (kbd "C-,")          'set-mark-command)
+(global-set-key (kbd "C-2")          'set-mark-command)
