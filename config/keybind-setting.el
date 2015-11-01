@@ -9,8 +9,7 @@
 (global-set-key (kbd "<f5>")         'revert-buffer)
 ;; Previous in GUI they share Ctrl+Enter
 (global-set-key (kbd "<f6>")         'cua-set-rectangle-mark)
-(global-set-key (kbd "<f6>")         'mark-whole-buffer)
-(global-set-key (kbd "C-c C-a")      'mark-whole-buffer)
+(global-set-key (kbd "C-c w")        'mark-whole-buffer)
 
 (global-set-key (kbd "<f7>")         'indent-whole)
 (global-set-key (kbd "<f12>")        'whitespace-mode)
