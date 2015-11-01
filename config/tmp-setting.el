@@ -74,3 +74,16 @@
           (lambda ()
             (define-key scheme-mode-map (kbd "<f9>") 'scheme-hfeng-run)
             ))
+
+;; Different theme
+(defun random-color-theme () (interactive)
+       (let ((chosen-theme
+              (nth
+               (random
+                (length (mapcar 'symbol-name (custom-available-themes))))
+               (custom-available-themes))))
+         (message "Theme: %s" chosen-theme)
+         (load-theme chosen-theme t nil)))
+
+(defun show-me-the-colors ()  (interactive) (loop do (random-color-theme) (sit-for 3)))
+(setq color-theme-is-cumulative 'false)
