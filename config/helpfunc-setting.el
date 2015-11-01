@@ -109,7 +109,8 @@
   ;; (line-beginning-position (+ 1 arg)))
   (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 
-;;set transparent and use f4 to control it
+;;set transparent and use f1 to control it
+(global-set-key (kbd "<f1>")         'loop-alpha)
 (setq alpha-list '((100 100) (80 70) (60 40)))
 (defun loop-alpha ()
   (interactive)
