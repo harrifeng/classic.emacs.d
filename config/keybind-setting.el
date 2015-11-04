@@ -3,6 +3,7 @@
 (global-set-key (kbd "C-x C-y")      'kill-ring-save)
 (global-set-key (kbd "C-x C-u")      'backward-kill-line)
 (global-set-key (kbd "C-x C-b")      'ibuffer)
+(global-set-key (kbd "C-x j")        'join-line)
 (global-set-key (kbd "C-w")          'backward-kill-word)
 (global-set-key (kbd "C-o")          'other-window)
 (global-set-key (kbd "C-h")          'backward-delete-char-untabify)
