@@ -118,10 +118,10 @@
   (save-buffer)
 
   (if (eq system-type 'windows-nt)
-      (setq rust-run-command "rustc %s && %s && rm %s.exe")
-    (setq rust-run-command "source ~/.bashrc && go run %s"))
+      (setq go-run-command "go run %s")
+    (setq go-run-command "source ~/.bashrc && go run %s"))
   (compile
-   (format rust-run-command
+   (format go-run-command
            (buffer-file-name))))
 
 
