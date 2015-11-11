@@ -87,3 +87,5 @@
 
 (defun show-me-the-colors ()  (interactive) (loop do (random-color-theme) (sit-for 3)))
 (setq color-theme-is-cumulative 'false)
+
+(load-file "~/.emacs.d/config/setup-slime-js.el")
