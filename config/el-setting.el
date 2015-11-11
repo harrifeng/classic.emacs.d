@@ -125,9 +125,22 @@
            (buffer-file-name))))
 
 
+(defun go-more-hfeng-run ()
+  (interactive)
+  (save-buffer)
+
+  (if (eq system-type 'windows-nt)
+      (setq go-run-command "go run *.go")
+    (setq go-run-command "source ~/.bashrc && go run *.go"))
+  (compile
+   (format go-run-command
+           (buffer-file-name))))
+
+
 (add-hook 'go-mode-hook
       (lambda ()
         (define-key go-mode-map (kbd "<f9>") 'go-hfeng-run)
+        (define-key go-mode-map (kbd "<f11>") 'go-more-hfeng-run)
         (define-key go-mode-map (kbd "TAB") #'company-indent-or-complete-common)
         ))
 

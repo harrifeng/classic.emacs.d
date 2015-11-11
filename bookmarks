@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("core-home"
+(("golang-harrifeng"
+ (filename . "~/golang-space/src/github.com/harrifeng/")
+ (front-context-string . "go-in-action\n  d")
+ (rear-context-string . "74 Nov  8 21:15 ")
+ (position . 307))
+("core-home"
  (filename . "/ssh:core@172.17.8.101:/home/core/")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "96 Oct 15 02:09 ")
