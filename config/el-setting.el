@@ -220,8 +220,8 @@
         ))
 
 ;; [S]lime---------------------------------------------------------------->>
-(if (file-exists-p "/usr/local/bin/sbcl") (setq inferior-lisp-program "/usr/local/bin/sbcl"))
-(if (file-exists-p "/usr/local/bin/sbcl") (setq slime-contribs '(slime-fancy)))
+(setq inferior-lisp-program (executable-find "sbcl"))
+(setq slime-contribs '(slime-fancy))
 
 
 ;; [S]mart-mode-line-powerline-theme-------------------------------------->>
