@@ -38,6 +38,8 @@
    racer
    rust-mode
    scss-mode
+   simple-httpd
+   skewer-mode
    slime
    smart-mode-line-powerline-theme
    solarized-theme
@@ -169,6 +171,10 @@
 ;; [I]nf-ruby------------------------------------------------------------->>
 ;; ruby shell mode
 
+;; [J]s2-mode------------------------------------------------------------->>
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
 ;; [M]agit---------------------------------------------------------------->>
 (global-set-key (kbd "C-M-i")        'magit-status)
 
@@ -218,6 +224,11 @@
         (define-key rust-mode-map (kbd "<f9>") 'rust-save-compile-and-run)
         (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
         ))
+;; [S]kewer-mode---------------------------------------------------------->>
+;; use simple-httpd inside
+(add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'css-mode-hook 'skewer-css-mode)
+(add-hook 'html-mode-hook 'skewer-html-mode)
 
 ;; [S]lime---------------------------------------------------------------->>
 (setq inferior-lisp-program (executable-find "sbcl"))
