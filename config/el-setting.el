@@ -114,6 +114,21 @@
   (set (make-local-variable 'company-backends) '(company-go))
   (company-mode)))
 
+(defun node-hfeng-run ()
+  (interactive)
+  (save-buffer)
+
+  (if (eq system-type 'windows-nt)
+      (setq go-run-command "node.exe %s")
+    (setq go-run-command "node %s"))
+  (compile
+   (format go-run-command
+           (buffer-file-name))))
+
+(add-hook 'js2-mode-hook
+      (lambda ()
+        (define-key js2-mode-map (kbd "<f9>") 'node-hfeng-run)
+        ))
 
 (defun go-hfeng-run ()
   (interactive)
