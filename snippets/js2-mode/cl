@@ -1,4 +1,4 @@
 # contributor: Harri Feng <harrifeng@gmail.com>
-# name: brackets
+# name: Console Log
 # --
-[$0] 
+console.log
