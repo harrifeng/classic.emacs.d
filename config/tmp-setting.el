@@ -87,3 +87,28 @@
 
 (defun show-me-the-colors ()  (interactive) (loop do (random-color-theme) (sit-for 3)))
 (setq color-theme-is-cumulative 'false)
+
+
+(defun objc-save-compile-and-run ()
+  (interactive)
+  (save-buffer)
+
+  (if (locate-dominating-file (buffer-file-name) "Cargo.toml")
+      (compile "cargo run")
+      ;; (setq objc-run-command "objcc %s && %s && rm %s")
+      (setq objc-run-command "clang -fobjc-arc -framework Foundation %s -o %s.exe && %s.exe && rm %s.exe")
+    (compile
+     (format objc-run-command
+             (buffer-file-name)
+             (file-name-sans-extension (buffer-file-name))
+             (file-name-sans-extension (buffer-file-name))
+             (file-name-sans-extension (buffer-file-name))
+             ))))
+
+(add-hook 'objc-mode-hook
+      (lambda ()
+        (define-key objc-mode-map (kbd "<f9>") 'objc-save-compile-and-run)
+        (define-key objc-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+        ))
+
+;; objc-mode
