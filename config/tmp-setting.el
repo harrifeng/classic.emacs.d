@@ -93,8 +93,8 @@
   (interactive)
   (save-buffer)
 
-  (if (locate-dominating-file (buffer-file-name) "Cargo.toml")
-      (compile "cargo run")
+  (if (locate-dominating-file (buffer-file-name) "Makefile")
+      (compile "make run && make clean")
       ;; (setq objc-run-command "objcc %s && %s && rm %s")
       (setq objc-run-command "clang -fobjc-arc -framework Foundation %s -o %s.exe && %s.exe && rm %s.exe")
     (compile
@@ -108,7 +108,6 @@
 (add-hook 'objc-mode-hook
       (lambda ()
         (define-key objc-mode-map (kbd "<f9>") 'objc-save-compile-and-run)
-        (define-key objc-mode-map (kbd "TAB") #'company-indent-or-complete-common)
         ))
 
 ;; objc-mode

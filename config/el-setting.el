@@ -318,5 +318,5 @@
 ;; From now on, we use Ctrl + ; to expand the yasnippet
 (define-key yas-minor-mode-map (kbd "<tab>") nil)
 (define-key yas-minor-mode-map (kbd "TAB") nil)
-(define-key yas-minor-mode-map (kbd "C-i") 'yas-expand)
+(define-key yas-minor-mode-map (kbd "C-o") 'yas-expand)
 

@@ -5,7 +5,7 @@
 (global-set-key (kbd "C-x C-b")      'ibuffer)
 (global-set-key (kbd "C-x j")        'join-line)
 (global-set-key (kbd "C-w")          'backward-kill-word)
-(global-set-key (kbd "C-o")          'other-window)
+;; (global-set-key (kbd "C-o")          'other-window)
 (global-set-key (kbd "C-h")          'backward-delete-char-untabify)
 (global-set-key (kbd "<f5>")         'revert-buffer)
 ;; Previous in GUI they share Ctrl+Enter
