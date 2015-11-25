@@ -157,7 +157,7 @@
       (lambda ()
         (define-key go-mode-map (kbd "<f9>") 'go-hfeng-run)
         (define-key go-mode-map (kbd "<f11>") 'go-more-hfeng-run)
-        (define-key go-mode-map (kbd "TAB") #'company-indent-or-complete-common)
+        ;; (define-key go-mode-map (kbd "TAB") #'company-indent-or-complete-common)
         ))
 
 ;; [H]ighlight-indentation------------------------------------------------>>
