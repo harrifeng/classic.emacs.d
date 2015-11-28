@@ -16,10 +16,10 @@
   (setq explicit-bash-args '("--noediting" "--login" "-i"))
 
   ;; Command as meta------------------------------------------->>
-  (setq mac-option-key-is-meta nil
-	mac-command-key-is-meta t
-	mac-command-modifier 'meta
-	mac-option-modifier 'none)
+  ;; (setq mac-option-key-is-meta nil
+  ;;   mac-command-key-is-meta t
+  ;;   mac-command-modifier 'meta
+  ;;   mac-option-modifier 'none)
 
   ;; el-get setting-------------------------------------------->>
   ;; (add-to-list 'load-path (concat my-emacs-path "el-get/el-get"))

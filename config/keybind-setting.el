@@ -39,3 +39,6 @@
 (global-set-key (kbd "C-c l")      'windmove-right)
 (global-set-key (kbd "C-c j")      'windmove-down)
 (global-set-key (kbd "C-c k")      'windmove-up)
+
+;; ctrl-c-ctrl-j is go to definition, so ctrl-c-ctrl-space is handy
+(global-set-key (kbd "C-c C-SPC")      'pop-global-mark)
