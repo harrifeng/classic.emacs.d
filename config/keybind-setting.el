@@ -7,6 +7,7 @@
 
 ;; c-x o is also other-window
 (global-set-key (kbd "C-c o")        'other-window)
+(global-set-key (kbd "C-'")          'other-window)
 
 (global-set-key (kbd "C-x C-u")      'backward-kill-line)
 (global-set-key (kbd "C-x C-b")      'ibuffer)
