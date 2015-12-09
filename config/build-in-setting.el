@@ -42,8 +42,8 @@
 (setq iswitchb-buffer-ignore '("^ " "*Completions*" "*Messages*"))
 
 ;;--------recentf------------------>>
-(recentf-mode 1)
-(setq recentf-max-menu-items 100)
+;; (recentf-mode 1)
+;; (setq recentf-max-menu-items 100)
 
 ;;--------ibuffer------------------>>
 (require 'ibuffer)
@@ -145,7 +145,7 @@
 ;; have priority over global keymaps.
 (add-hook 'org-mode-hook
           (lambda()
-            (define-key org-mode-map (kbd "C-,") 'set-mark-command)))
+            (define-key org-mode-map (kbd "C-,") 'other-window)))
 
 (defconst my-blog-url "http://localhost:8765/")
 (defconst my-link-home (concat my-blog-url "index.html"))

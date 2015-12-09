@@ -7,7 +7,7 @@
 
 ;; c-x o is also other-window
 (global-set-key (kbd "C-c o")        'other-window)
-(global-set-key (kbd "C-'")          'other-window)
+(global-set-key (kbd "C-,")          'other-window)
 
 (global-set-key (kbd "C-x C-u")      'backward-kill-line)
 (global-set-key (kbd "C-x C-b")      'ibuffer)
@@ -33,7 +33,6 @@
 (global-set-key (kbd "C-c C-g")      'helm-global-mark-ring)
 ;; Still need these key to work on the GUI emacs
 (global-set-key (kbd "<C-return>")   'mark-whole-buffer)
-(global-set-key (kbd "C-,")          'set-mark-command)
 (global-set-key (kbd "C-2")          'set-mark-command)
 
 (global-set-key (kbd "C-c h")      'windmove-left)
