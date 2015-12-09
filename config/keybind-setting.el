@@ -1,12 +1,14 @@
 (provide 'keybind-setting)
 (global-set-key (kbd "C-x C-k")      'kill-region)
 (global-set-key (kbd "C-c C-k")      'kill-region)
+;; actually ctrl + ; in iterm2
+(global-set-key (kbd "M-[ a")        'other-window)
 
 (global-set-key (kbd "C-x C-y")      'kill-ring-save)
 (global-set-key (kbd "C-c C-y")      'kill-ring-save)
 
 ;; c-x o is also other-window
-(global-set-key (kbd "C-c o")        'other-window)
+(global-set-key (kbd "C-c o")        'magit-status)
 (global-set-key (kbd "C-,")          'other-window)
 
 (global-set-key (kbd "C-x C-u")      'backward-kill-line)

@@ -174,8 +174,8 @@
           (lambda () (highlight-indentation-current-column-mode)))
 
 ;; [H]ighlight-symbol----------------------------------------------------->>
-(setq highlight-symbol-mode t)
-(global-set-key [f4] 'highlight-symbol-at-point)
+(require 'highlight-symbol)
+(global-set-key [(control f3)] 'highlight-symbol)
 (global-set-key [f3] 'highlight-symbol-next)
 (global-set-key [(shift f3)] 'highlight-symbol-prev)
 (global-set-key [(meta f3)] 'highlight-symbol-query-replace)
@@ -191,7 +191,7 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;; [M]agit---------------------------------------------------------------->>
-(global-set-key (kbd "C-M-i")        'magit-status)
+(global-set-key (kbd "C-M-j")        'magit-status)
 
 ;; [M]ulti-term----------------------------------------------------------->>
 (require 'multi-term)
@@ -271,14 +271,14 @@
 
 ;; [W]eb-mode------------------------------------------------------------->>
 (require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 
 ;; [Y]asnippet------------------------------------------------------------>>
 (require 'yasnippet)
