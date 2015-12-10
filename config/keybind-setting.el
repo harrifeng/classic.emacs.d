@@ -21,6 +21,8 @@
 ;; Previous in GUI they share Ctrl+Enter
 (global-set-key (kbd "<f2>")         'helm-global-mark-ring)
 (global-set-key (kbd "<f6>")         'cua-set-rectangle-mark)
+;; actually ctrl + enter in iterm2
+(global-set-key (kbd "M-[ d")        'cua-set-rectangle-mark)
 (global-set-key (kbd "<f7>")         'indent-whole)
 (global-set-key (kbd "<f12>")        'whitespace-mode)
 (global-set-key (kbd "C-c w")        'mark-whole-buffer)
