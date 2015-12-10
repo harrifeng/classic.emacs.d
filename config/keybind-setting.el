@@ -1,15 +1,15 @@
 (provide 'keybind-setting)
 (global-set-key (kbd "C-x C-k")      'kill-region)
 (global-set-key (kbd "C-c C-k")      'kill-region)
+
+(global-set-key (kbd "C-c o")        'other-window)
 ;; actually ctrl + ; in iterm2
 (global-set-key (kbd "M-[ a")        'other-window)
+;; standalone emacs app
+(global-set-key (kbd "C-;")          'other-window)
 
 (global-set-key (kbd "C-x C-y")      'kill-ring-save)
 (global-set-key (kbd "C-c C-y")      'kill-ring-save)
-
-;; c-x o is also other-window
-(global-set-key (kbd "C-c o")        'magit-status)
-(global-set-key (kbd "C-,")          'other-window)
 
 (global-set-key (kbd "C-x C-u")      'backward-kill-line)
 (global-set-key (kbd "C-x C-b")      'ibuffer)
@@ -36,6 +36,10 @@
 ;; Still need these key to work on the GUI emacs
 (global-set-key (kbd "<C-return>")   'mark-whole-buffer)
 (global-set-key (kbd "C-2")          'set-mark-command)
+;; actually ctrl + , in iterm2
+(global-set-key (kbd "M-[ b")        'set-mark-command)
+;; standalone emacs app
+(global-set-key (kbd "C-,")          'set-mark-command)
 
 (global-set-key (kbd "C-c h")      'windmove-left)
 (global-set-key (kbd "C-c l")      'windmove-right)
