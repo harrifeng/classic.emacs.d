@@ -2,11 +2,15 @@
 (global-set-key (kbd "C-x C-k")      'kill-region)
 (global-set-key (kbd "C-c C-k")      'kill-region)
 
+;; Group key bind-------------------------------->
+;; iterm set `ctrl-;` to `0x03 0x6f`
 (global-set-key (kbd "C-c o")        'other-window)
-;; actually ctrl + ; in iterm2
-(global-set-key (kbd "M-[ a")        'other-window)
-;; standalone emacs app
 (global-set-key (kbd "C-;")          'other-window)
+
+;; Group key bind-------------------------------->
+;; iterm set `ctrl-=` to `0x03 0x61`
+(global-set-key (kbd "C-c a")        'cua-set-rectangle-mark)
+(global-set-key (kbd "C-=")          'cua-set-rectangle-mark)
 
 (global-set-key (kbd "C-x C-y")      'kill-ring-save)
 (global-set-key (kbd "C-c C-y")      'kill-ring-save)
@@ -18,11 +22,7 @@
 (global-set-key (kbd "C-h")          'backward-delete-char-untabify)
 (global-set-key (kbd "<f5>")         'revert-buffer)
 
-;; Previous in GUI they share Ctrl+Enter
 (global-set-key (kbd "<f2>")         'helm-global-mark-ring)
-;; actually ctrl + enter in iterm2
-(global-set-key (kbd "M-[ d")        'cua-set-rectangle-mark)
-
 (global-set-key (kbd "<f6>")         'mark-whole-buffer)
 (global-set-key (kbd "C-c w")        'mark-whole-buffer)
 (global-set-key (kbd "<f7>")         'indent-whole)
@@ -36,13 +36,8 @@
 
 (global-set-key (kbd "C-x C-g")      'helm-global-mark-ring)
 (global-set-key (kbd "C-c C-g")      'helm-global-mark-ring)
-;; Still need these key to work on the GUI emacs
 (global-set-key (kbd "<C-return>")   'mark-whole-buffer)
 (global-set-key (kbd "C-2")          'set-mark-command)
-;; actually ctrl + , in iterm2
-(global-set-key (kbd "M-[ b")        'set-mark-command)
-;; standalone emacs app
-(global-set-key (kbd "C-,")          'set-mark-command)
 
 (global-set-key (kbd "C-c h")      'windmove-left)
 (global-set-key (kbd "C-c l")      'windmove-right)
