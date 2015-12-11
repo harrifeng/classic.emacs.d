@@ -20,6 +20,8 @@
 (global-set-key (kbd "C-x j")        'join-line)
 (global-set-key (kbd "C-w")          'backward-kill-word)
 (global-set-key (kbd "C-h")          'backward-delete-char-untabify)
+
+(global-set-key (kbd "C-c r")        'revert-buffer)
 (global-set-key (kbd "<f5>")         'revert-buffer)
 
 (global-set-key (kbd "<f2>")         'helm-global-mark-ring)

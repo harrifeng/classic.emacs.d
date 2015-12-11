@@ -59,7 +59,7 @@
 ;; (ac-config-default)
 
 ;; [A]vy------------------------------------------------------------------>>
-(global-set-key (kbd "C-x h")          'avy-goto-char)
+(global-set-key (kbd "C-t")          'avy-goto-char)
 
 ;; [B]m-toogle------------------------------------------------------------>>
 (require 'bm)
@@ -192,7 +192,7 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;; [M]agit---------------------------------------------------------------->>
-(global-set-key (kbd "C-M-j")        'magit-status)
+(global-set-key (kbd "C-M-i")        'magit-status)
 
 ;; [M]ulti-term----------------------------------------------------------->>
 (require 'multi-term)
