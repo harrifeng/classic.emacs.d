@@ -48,3 +48,6 @@
 
 ;; ctrl-c-ctrl-j is go to definition, so ctrl-c-ctrl-space is handy
 (global-set-key (kbd "C-c C-SPC")      'pop-global-mark)
+
+;; shell is too often used command
+(global-set-key (kbd "C-c c")      'shell)
